@@ -21,6 +21,9 @@ Machine Learning can effectively help alleviate this issue.
 We will build a system which intends to assist the Indian farmers in making an informed decision about which crop to grow depending on the sowing season, his farms geographical location, soil characteristics as well as environmental factors such as temperature and rainfall.
 
 Idea 3: 
+
+Owner Resource Carrier Pool
+
 Owner Resource Carrier Pool is a tool that can be used by the common people to find an easy way to get their belongings to their current place without physically going back to their residence.
 The software’s database will consist of the data of users residing in the vicinity of your residence.
 
