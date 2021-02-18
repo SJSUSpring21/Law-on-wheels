@@ -13,10 +13,12 @@ Access to Legal services in India is very limited, especially in rural areas. In
 Idea 2:
 Crop recommendation System  for farmers.
 
-Agriculture plays a critical role in the global economy. With the continuing expansion of the human population understanding worldwide crop yield is central to addressing food security challenges and reducing the impacts of climate change.
-Crop yield prediction is an important agricultural problem. The Agricultural yield primarily depends on weather conditions (rain, temperature, etc), pesticides. Accurate information about history of crop yield is important
-•	Predicting most consumed crops for a particulat area.
-•	Prediction of which crop to be harvested based on climate conditions
+
+The mainstream Indian population depends either explicitly or implicitly on agriculture for their livelihood.
+A single farmer cannot be expected to take into account all the innumerable factors that contribute to crop growth before reaching a consensus about which one to grow.
+A single misguided or imprudent decision by the farmer can have undesirable ramifications on both himself as well as the agricultural economy of the region.
+Machine Learning can effectively help alleviate this issue.
+We will build a system which intends to assist the Indian farmers in making an informed decision about which crop to grow depending on the sowing season, his farms geographical location, soil characteristics as well as environmental factors such as temperature and rainfall.
 
 Idea 3: 
 Dunzo
