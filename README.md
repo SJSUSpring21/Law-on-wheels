@@ -19,9 +19,9 @@ Access to Legal services in India is very limited, especially in rural areas. In
  4. Built website & convert to App using available tools & with major services.
  5. Get the knowledge of Law domain.
 
-4. Persona
+**4. Persona**
 
-5. Dataset links -NO
+**5. Dataset links -NO**
 
 
 
