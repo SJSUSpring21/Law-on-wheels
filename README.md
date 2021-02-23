@@ -1,4 +1,4 @@
-# Law on Wheels - Team 15
+# Justice on wheels - Team 15
 Idea approved from Prof Ranjan:: Justice on wheels
 
 Access to Legal services in India is very limited, especially in rural areas. In many cases, long running justice process and expensive legal help deter people even to seek justice. A Justice on wheels app(with lawyers network) that provides mobile (at your doorstep ) service for:
