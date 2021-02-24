@@ -1,4 +1,4 @@
-# Justice on wheels - Team 15
+# Justice on wheels - Team 15 - Approved
 Idea approved from Prof Ranjan:: Justice on wheels
 
 **1. Introduction to the problem statement**
