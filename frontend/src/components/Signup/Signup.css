@@ -1,0 +1,152 @@
+#signup {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.leftside {
+    background: url(../../images/wave-blue.png) no-repeat;
+    background-size: 100% 102%;
+}
+
+.leftside img {
+    width: 50%;
+    max-width: 50%;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    padding: 24px;
+}
+
+.title {
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.separator {
+    background-color: #843bc7;
+    margin: 24px;
+    width: 150px;
+    height: 4px;
+}
+
+.welcome-message {
+    margin-bottom: 30px;
+    color: #696969;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 28px;
+}
+
+.signup-form {
+    /* margin-top: 50px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+input,
+button {
+    border-radius: 30px;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+}
+
+input {
+    letter-spacing: 0.5px;
+    padding: 14px 64px;
+    width: 100%;
+    background: #e6e6e6;
+    color: #333;
+}
+
+input ~ i {
+    color: #888;
+    transition: color 0.4s;
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input:focus ~ i {
+    color: #843bc7;
+}
+
+button.submit {
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #fff;
+    padding: 14px 64px;
+    margin: 32px auto;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+button.submit:hover {
+    opacity: 0.9;
+}
+
+/* ----  Responsiveness   ----  */
+@media (max-width: 780px) {
+    #signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leftside {
+        display: none;
+    }
+}
+
+/*-----------Radio------------*/
+.radio-signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio__input_signup {
+    display: none;
+}
+
+.radio__label_signup {
+    padding: 8px 14px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #15a0e1;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.radio__label_signup:not(:last-of-type) {
+    border-right: 1px solid #8b33c5;
+}
+
+.radio__input_signup:checked + .radio__label_signup {
+    background: #8b33c5;
+}
