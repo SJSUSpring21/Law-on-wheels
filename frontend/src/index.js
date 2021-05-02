@@ -12,9 +12,7 @@ const saveToLocalStorage = (state) => {
     try {
         const serializedState = JSON.stringify(state);
         localStorage.setItem("state", serializedState);
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 };
 
 const loadFromLocalStorage = () => {
@@ -25,7 +23,6 @@ const loadFromLocalStorage = () => {
         }
         return JSON.parse(serializedState);
     } catch (e) {
-        console.log(e);
         return undefined;
     }
 };

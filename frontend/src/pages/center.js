@@ -3,6 +3,8 @@ import MainNavbar from "../components/MainNavbar";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import SignedInSidebar from "../components/Sidebar/signedInSidebar";
+import ClientCenter from "../components/Center/ClientCenter";
+import LawyerCenter from "../components/Center/LawyerCenter";
 
 class Center extends Component {
     state = {
@@ -16,6 +18,14 @@ class Center extends Component {
     render() {
         const { loggedIn } = this.props;
         if (!loggedIn) return <Redirect to="/" />;
+        const type = localStorage.getItem("type");
+        let center;
+        if (type === "USER") {
+            center = <ClientCenter />;
+        } else if (type === "LAWYER") {
+            center = <LawyerCenter />;
+        }
+
         return (
             <>
                 <SignedInSidebar
@@ -24,11 +34,12 @@ class Center extends Component {
                 />
 
                 <MainNavbar toggle={this.handleToggle} />
+
+                {center}
             </>
         );
     }
 }
-
 const mapStateToProps = (state) => {
     return {
         loggedIn: state.auth.loggedIn,

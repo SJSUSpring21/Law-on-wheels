@@ -18,7 +18,6 @@ class SignUp extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
-        console.log(e.target.value);
     };
 
     handleSubmit = (e) => {
@@ -30,7 +29,6 @@ class SignUp extends Component {
                 "error"
             );
         } else {
-            console.log(this.state);
             this.props.signUp(this.state);
         }
     };
