@@ -5,6 +5,7 @@ export const ServicesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    // padding-top: -80px;
     align-items: center;
     background: #010606;
 
