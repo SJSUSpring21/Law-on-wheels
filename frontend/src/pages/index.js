@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import MainNavbar from "../components/MainNavbar";
 import MainSection from "../components/MainSection";
-import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Sidebar from "../components/Sidebar";
 import SignUp from "../components/Signup";
@@ -15,7 +15,7 @@ const Landing = () => {
     return (
         <>
             <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Navbar toggle={toggle} />
+            <MainNavbar toggle={toggle} />
             <MainSection />
             <Services />
             <SignUp />
