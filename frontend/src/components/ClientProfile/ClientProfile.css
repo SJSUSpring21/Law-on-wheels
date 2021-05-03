@@ -119,3 +119,39 @@ span {
     grid-gap: 5rem;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-gap: 5rem;
+  }
+  form {
+    width: 290px;
+  }
+  .leftbox {
+    grid-gap: 5rem;
+  }
+  .rightbox {
+    grid-gap: 5rem;
+  }
+  .tabShow {
+    grid-gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    grid-gap: 5rem;
+  }
+  form {
+    width: 290px;
+  }
+  .leftbox {
+    grid-gap: 5rem;
+  }
+  .rightbox {
+    grid-gap: 5rem;
+  }
+  .tabShow {
+    grid-gap: 5rem;
+  }
+}
