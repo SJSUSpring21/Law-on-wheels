@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import ClientProfile from "../components/ClientProfile";
+import MainNavbar from "../components/MainNavbar";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import SignedInSidebar from "../components/Sidebar/signedInSidebar";
-import MainNavbar from "../components/MainNavbar";
+import RentAgreement from "../components/Services/RentAgreement";
 
-class ClientProfilePage extends Component {
+class ServiceRentAgreement extends Component {
     state = {
         isOpen: false,
     };
@@ -17,6 +17,7 @@ class ClientProfilePage extends Component {
     render() {
         const { loggedIn } = this.props;
         if (!loggedIn) return <Redirect to="/" />;
+
         return (
             <>
                 <SignedInSidebar
@@ -25,16 +26,16 @@ class ClientProfilePage extends Component {
                 />
 
                 <MainNavbar toggle={this.handleToggle} />
-                <ClientProfile />
+
+                <RentAgreement />
             </>
         );
     }
 }
-
 const mapStateToProps = (state) => {
     return {
         loggedIn: state.auth.loggedIn,
     };
 };
 
-export default connect(mapStateToProps, null)(ClientProfilePage);
+export default connect(mapStateToProps, null)(ServiceRentAgreement);

@@ -5,7 +5,6 @@ export const ServicesContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // padding-top: -80px;
     align-items: center;
     background: #010606;
 
@@ -72,6 +71,7 @@ export const ServicesH1 = styled.h1`
 export const ServicesH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
+    font-weight: bold;
 `;
 
 export const ServicesP = styled.p`

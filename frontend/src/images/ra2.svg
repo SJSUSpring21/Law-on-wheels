@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="447" height="768" viewBox="0 0 447 768">
+    <defs>
+        <linearGradient id="prefix__c" x1="69.798%" x2="19.571%" y1="15.828%" y2="79.815%">
+            <stop offset="0%" stop-color="#31C39C" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#328578"/>
+        </linearGradient>
+        <linearGradient id="prefix__d" x1="55.179%" x2="70.509%" y1="7.375%" y2="102.233%">
+            <stop offset="0%" stop-color="#31C39C" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#1E9482"/>
+        </linearGradient>
+        <path id="prefix__a" d="M0 0H447V768H0z"/>
+        <path id="prefix__e" d="M50.418 126.148v153.919h119.2V126.148h-119.2zm-9.933-9.93L.99 86.654V0h316.347v454.814L173.343 289.997H40.485V116.218zm23.592 31.032h91.883v58.34H64.077v-58.34zm0 85.648h91.883v9.712H64.077v-9.712zm0 24.826h67.05v9.712h-67.05v-9.712z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="prefix__b" fill="#fff">
+            <use xlink:href="#prefix__a"/>
+        </mask>
+        <use fill="#D8D8D8" xlink:href="#prefix__a"/>
+        <g mask="url(#prefix__b)">
+            <g>
+                <path fill="#2FA996" d="M0 0L447 0 447 801.866 0 801.866z" transform="translate(-227.225 -179.985) matrix(1 0 0 -1 227.225 978.128)"/>
+                <path fill="url(#prefix__c)" d="M181.282 158.884L445.757 158.884 185.007 570.988 181.282 570.988z" transform="translate(-227.225 -179.985) matrix(1 0 0 -1 0 729.872)"/>
+                <path fill="url(#prefix__d)" d="M233.014 79.249L497.489 79.249 236.739 491.354 58.619 398.763z" transform="translate(-227.225 -179.985) scale(1 -1) rotate(-66 -161.272 0)"/>
+                <g transform="translate(-227.225 -179.985) translate(447 129.093)">
+                    <mask id="prefix__f" fill="#fff">
+                        <use xlink:href="#prefix__e"/>
+                    </mask>
+                    <use fill="#289684" fill-rule="nonzero" xlink:href="#prefix__e"/>
+                    <g mask="url(#prefix__f)">
+                        <g>
+                            <g>
+                                <g transform="translate(-211.083 -29.79) translate(3.725) matrix(1 0 0 -1 .529 145.557)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(3.725) rotate(180 195.514 72.778)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#2FA996" fill-rule="nonzero" d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path fill="#28B9A2" fill-rule="nonzero" d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#2FA996" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path fill="#1C8877" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#1EA08B" d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#2FA996" fill-rule="nonzero" d="M97.513 0L146.965 0 146.965 96.617 97.513 96.617z"/>
+                                    <path fill="#2EBEA7" fill-rule="nonzero" d="M97.364 0L193.488 96.617 97.364 96.617z"/>
+                                    <path fill="#1EA08B" fill-rule="nonzero" d="M98.606 0L194.729 96.617 98.606 96.617z" transform="matrix(-1 0 0 1 293.335 0)"/>
+                                </g>
+                            </g>
+                            <g transform="translate(-211.083 -29.79) matrix(1 0 0 -1 400.76 145.557)">
+                                <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                <path fill="#289684" fill-rule="nonzero" d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                <path d="M0 0L96.122 96.617 0 96.617z"/>
+                                <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                            </g>
+                            <g>
+                                <g transform="translate(-211.083 -29.79) translate(0 151.436) matrix(1 0 0 -1 .916 393.358)">
+                                    <ellipse cx="48.061" cy="97.304" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0.685L96.122 0.685 96.122 97.303 0 97.303z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 0.685L48.061 0.685 48.061 97.303 0 97.303z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0.685L96.122 97.304 0 97.304z"/>
+                                    <path d="M0 0.685L96.122 97.304 0 97.304z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 97.304L96.122 97.304 96.122 193.921 0 193.921z"/>
+                                    <path d="M0 97.304L48.061 97.304 48.061 193.921 0 193.921z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="97.304" fill="#EC5396" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0.35L196.25 0.35 196.25 97.639 96.122 97.639z"/>
+                                    <path fill="#55D6A7" fill-rule="nonzero" d="M96.122 0.685L144.184 0.685 144.184 97.303 96.122 97.303z"/>
+                                    <path d="M96.122 0.685L192.246 97.304 96.122 97.304z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0.685L192.246 97.304 96.122 97.304z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 97.304L192.245 97.304 192.245 193.921 96.122 193.921z"/>
+                                    <path d="M96.122 97.304L144.184 97.304 144.184 193.921 96.122 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 97.304L192.246 97.304 192.246 193.921 144.185 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 97.304L192.246 193.921 96.122 193.921z"/>
+                                    <path fill="#FFDC54" fill-rule="nonzero" d="M96.122 97.304L192.246 193.921 96.122 193.921z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 151.436) rotate(-180 197.377 196.336)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#EC5396" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#301463" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#55D6A7" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#EC5396" fill-rule="nonzero" d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 93.264L192.246 93.264 192.246 193.236 144.185 193.236z"/>
+                                    <path stroke="#5842CE" stroke-width="1.669" d="M194.253 194.07L95.288 194.07 95.288 94.597z"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 151.436) translate(.916 .161)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 96.617L192.245 96.617 192.245 193.235 96.122 193.235z"/>
+                                    <path d="M96.122 96.617L144.184 96.617 144.184 193.235 96.122 193.235z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 96.617L192.246 96.617 192.246 193.235 144.185 193.235z"/>
+                                    <path d="M96.122 96.617L192.246 193.236 96.122 193.236z"/>
+                                    <path d="M96.122 96.617L192.246 193.236 96.122 193.236z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 151.436) matrix(-1 0 0 1 394.753 .16)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#1D7E6E" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#268677" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path fill="#289684" fill-rule="nonzero" d="M13.586 15.34L94.789 98.008 0.001 98.008 0.001 15.34z" transform="matrix(-1 0 0 1 94.79 0)"/>
+                                    <path fill="#176B5E" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#218071" fill-rule="nonzero" d="M85.675 96.82L133.736 96.82 133.736 193.437 85.675 193.437z"/>
+                                    <path fill="#1A9481" d="M50.908 134.058H122.925V146.471H50.908z"/>
+                                    <path fill="#552BA0" fill-rule="nonzero" d="M144.185 96.617L192.246 96.617 192.246 193.235 144.185 193.235z"/>
+                                    <path fill="#176B5E" fill-rule="nonzero" d="M96.122 96.617L192.246 193.236 96.122 193.236z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="translate(-211.083 -29.79) translate(401.058 150.195) matrix(1 0 0 -1 .37 393.706)">
+                                    <ellipse cx="48.061" cy="97.397" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0.778L96.122 0.778 96.122 97.396 0 97.396z"/>
+                                    <path d="M0 0.778L48.061 0.778 48.061 97.396 0 97.396z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0.778L96.122 97.397 0 97.397z"/>
+                                    <path d="M1.335 0.778L97.458 97.397 1.335 97.397z" transform="matrix(-1 0 0 1 98.793 0)"/>
+                                    <path d="M0 97.397L96.122 97.397 96.122 194.014 0 194.014z"/>
+                                    <path d="M0 97.397L48.061 97.397 48.061 194.014 0 194.014z"/>
+                                    <path fill="#270D54" fill-rule="nonzero" d="M0 97.397L96.122 194.014 0 194.014z"/>
+                                    <path fill="#289684" fill-rule="nonzero" d="M0 97.397L96.122 194.014 0 194.014z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(401.058 150.195) translate(.37 .416)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#4669F4" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#301463" fill-rule="nonzero" d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path fill="#33C6AF" fill-rule="nonzero" d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#1C8877" fill-rule="nonzero" d="M0 0L97.513 96.617 0 96.617z"/>
+                                    <path fill="#1C8877" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path fill="#1C8877" fill-rule="nonzero" d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path fill="#1E9986" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#289684" fill-rule="nonzero" d="M0 96.617L96.122 194.57 0 194.57z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="translate(-211.083 -29.79) translate(0 548.645) matrix(1 0 0 -1 .916 394.127)">
+                                    <ellipse cx="48.061" cy="97.304" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0.685L96.122 0.685 96.122 97.303 0 97.303z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 0.685L48.061 0.685 48.061 97.303 0 97.303z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0.685L96.122 97.304 0 97.304z"/>
+                                    <path d="M0 0.685L96.122 97.304 0 97.304z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 97.304L96.122 97.304 96.122 193.921 0 193.921z"/>
+                                    <path d="M0 97.304L48.061 97.304 48.061 193.921 0 193.921z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="97.304" fill="#EC5396" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0.35L196.25 0.35 196.25 97.639 96.122 97.639z"/>
+                                    <path fill="#55D6A7" fill-rule="nonzero" d="M96.122 0.685L144.184 0.685 144.184 97.303 96.122 97.303z"/>
+                                    <path d="M96.122 0.685L192.246 97.304 96.122 97.304z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0.685L192.246 97.304 96.122 97.304z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 97.304L192.245 97.304 192.245 193.921 96.122 193.921z"/>
+                                    <path d="M96.122 97.304L144.184 97.304 144.184 193.921 96.122 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 97.304L192.246 97.304 192.246 193.921 144.185 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 97.304L192.246 193.921 96.122 193.921z"/>
+                                    <path fill="#FFDC54" fill-rule="nonzero" d="M96.122 97.304L192.246 193.921 96.122 193.921z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 548.645) rotate(-180 197.377 196.72)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#EC5396" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#55D6A7" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#EC5396" fill-rule="nonzero" d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 96.617L192.245 96.617 192.245 193.235 96.122 193.235z"/>
+                                    <path d="M96.122 96.617L144.184 96.617 144.184 193.235 96.122 193.235z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 93.264L192.246 93.264 192.246 193.236 144.185 193.236z"/>
+                                    <path stroke="#5842CE" stroke-width="1.669" d="M194.253 194.07L95.288 194.07 95.288 94.597z"/>
+                                    <path d="M96.122 96.617L192.246 193.236 96.122 193.236z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 548.645) translate(.916 .931)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 96.617L192.245 96.617 192.245 193.235 96.122 193.235z"/>
+                                    <path d="M96.122 96.617L144.184 96.617 144.184 193.235 96.122 193.235z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 96.617L192.246 96.617 192.246 193.235 144.185 193.235z"/>
+                                    <path d="M96.122 96.617L192.246 193.236 96.122 193.236z"/>
+                                    <path d="M96.122 96.617L192.246 193.236 96.122 193.236z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(0 548.645) matrix(-1 0 0 1 394.753 .93)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <ellipse cx="144.185" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M96.122 0L192.245 0 192.245 96.617 96.122 96.617z"/>
+                                    <path fill="#EC5396" fill-rule="nonzero" d="M96.122 0L144.184 0 144.184 96.617 96.122 96.617z"/>
+                                    <path d="M96.122 0L192.246 96.617 96.122 96.617z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 0L192.246 96.617 96.122 96.617z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                    <path d="M96.122 96.617L192.245 96.617 192.245 193.235 96.122 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 96.617L144.184 96.617 144.184 193.235 96.122 193.235z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M144.185 96.617L192.246 96.617 192.246 193.235 144.185 193.235z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M96.122 96.617L192.246 193.236 96.122 193.236z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M96.122 96.617L192.246 193.236 96.122 193.236z" transform="matrix(-1 0 0 1 288.368 0)"/>
+                                </g>
+                            </g>
+                            <g>
+                                <g transform="translate(-211.083 -29.79) translate(401.058 548.645) matrix(1 0 0 -1 .37 394.127)">
+                                    <ellipse cx="48.061" cy="97.304" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0.685L96.122 0.685 96.122 97.303 0 97.303z"/>
+                                    <path d="M0 0.685L48.061 0.685 48.061 97.303 0 97.303z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0.685L96.122 97.304 0 97.304z"/>
+                                    <path d="M0 0.685L96.122 97.304 0 97.304z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 97.304L96.122 97.304 96.122 193.921 0 193.921z"/>
+                                    <path d="M0 97.304L48.061 97.304 48.061 193.921 0 193.921z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 97.304L96.122 193.921 0 193.921z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                </g>
+                                <g transform="translate(-211.083 -29.79) translate(401.058 548.645) translate(.37 .931)">
+                                    <ellipse cx="48.061" cy="96.617" fill="#5842CE" fill-rule="nonzero" rx="48.061" ry="48.309"/>
+                                    <path d="M0 0L96.122 0 96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L48.061 0 48.061 96.617 0 96.617z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 0L96.122 96.617 0 96.617z"/>
+                                    <path d="M0 0L96.122 96.617 0 96.617z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                    <path d="M0 96.617L96.122 96.617 96.122 193.235 0 193.235z"/>
+                                    <path d="M0 96.617L48.061 96.617 48.061 193.235 0 193.235z"/>
+                                    <path fill="#5E47DC" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z"/>
+                                    <path fill="#5842CE" fill-rule="nonzero" d="M0 96.617L96.122 193.236 0 193.236z" transform="matrix(-1 0 0 1 96.122 0)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <path fill="#176B5E" d="M52.943 219.164L37.906 219.164 37.906 115.076 182.79 115.076 182.79 123.811 157.327 148.547 157.327 126.812 52.943 126.812z" mask="url(#prefix__f)"/>
+                    <path fill="#FFD215" d="M88.978 115.358L76.509 127.779 135.834 127.779 135.834 115.358z" mask="url(#prefix__f)"/>
+                    <rect width="27.317" height="27.308" x="106.783" y="161.366" fill-rule="nonzero" stroke="#FFD215" stroke-width="1.242" rx="13.654"/>
+                    <rect width="19.867" height="19.86" x="110.508" y="165.09" fill-rule="nonzero" stroke="#FFD215" stroke-width=".745" rx="9.93"/>
+                </g>
+                <g>
+                    <path fill="#30BDA7" fill-rule="nonzero" d="M43.453 9.12c-3.957 2.87-6.977 7.017-8.396 11.961-2.708 9.435 1.078 19.457 9.204 24.831l-.066 1.877c-.017.834.27 1.612.798 2.208l-9.575 20.534c-.1.247-.278.455-.508.59l-8.863 3.176c-.482.179-1.018.155-1.486-.064-.467-.22-.827-.617-.999-1.102l-3.19-8.602c-.086-.235-.078-.493.021-.721l1.134-2.529c.07-.157.207-.274.374-.318l4.99-1.305c.167-.044.306-.16.379-.315.072-.156.072-.336-.002-.493l-2.019-4.26c-.073-.16-.072-.342.001-.5.074-.157.213-.275.382-.321l4.547-1.176c.169-.046.31-.163.383-.32.074-.16.074-.342 0-.501l-2.022-4.24c-.073-.158-.073-.34 0-.498.074-.158.214-.275.382-.322l4.547-1.176c.17-.045.31-.163.384-.32.074-.16.073-.342 0-.501l-2.208-4.63c-.072-.16-.072-.342 0-.5l1.234-2.647c-4.924-6.447-4.816-15.378.262-21.645 2.67-3.295 6.35-5.408 10.312-6.172z" transform="translate(-227.225 -179.985) translate(576.133 333.904)"/>
+                    <g>
+                        <path fill="#44D2BC" fill-rule="nonzero" d="M18.91 79.628l-7.425-7.338c-.202-.2-.319-.47-.326-.753l-.047-3.154c-.003-.195.082-.382.233-.508l4.52-3.745c.15-.126.237-.312.237-.507 0-.196-.087-.382-.238-.508l-4.131-3.423c-.152-.129-.239-.317-.239-.515s.087-.386.238-.515l4.124-3.4c.153-.128.242-.316.242-.515s-.088-.387-.241-.515l-4.124-3.4c-.152-.129-.239-.317-.239-.515s.087-.386.238-.515l4.124-3.4c.154-.128.242-.316.242-.515s-.088-.387-.242-.516l-4.503-3.714c-.15-.13-.238-.318-.24-.516V37.82C2.934 33.537-1.25 24.275.973 15.369 3.197 6.464 11.254.21 20.5.21c9.247 0 17.303 6.255 19.526 15.16 2.222 8.906-1.96 18.168-10.139 22.45v33.425c.016.303-.068.603-.24.854l-7.612 7.538c-.412.415-.976.649-1.564.647-.588-.001-1.15-.238-1.56-.655z" transform="translate(-227.225 -179.985) translate(576.133 333.904) translate(37.25 6.206)"/>
+                        <path fill="#23A692" d="M15.136 12.184c0 2.94 2.402 5.322 5.364 5.323 2.17 0 4.125-1.297 4.956-3.286.83-1.989.371-4.278-1.163-5.8-1.534-1.522-3.841-1.978-5.846-1.153-2.005.823-3.311 2.764-3.311 4.916z" transform="translate(-227.225 -179.985) translate(576.133 333.904) translate(37.25 6.206)"/>
+                        <path fill="#34B7A2" fill-rule="nonzero" d="M23.75 38.025c.313-.31.785-.403 1.194-.235.41.168.677.564.677 1.004v23.95c.006.393-.202.758-.543.956-.342.198-.764.198-1.106 0-.342-.198-.55-.563-.543-.956v-23.95c0-.288.115-.565.32-.769zM23.6 67.398c-.424-.425-.422-1.116.006-1.544.428-.429 1.12-.431 1.545-.006.424.424.421 1.116-.007 1.544-.428.428-1.12.43-1.544.006z" transform="translate(-227.225 -179.985) translate(576.133 333.904) translate(37.25 6.206)"/>
+                    </g>
+                </g>
+                <g fill-rule="nonzero" opacity=".1" transform="translate(-227.225 -179.985) translate(358.842 194.88)">
+                    <g transform="translate(64.567)">
+                        <circle cx="2.458" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="18.849" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="35.239" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="51.629" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="2.458" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="18.849" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="35.239" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="51.629" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="2.458" cy="35.227" r="2.458" fill="#197769"/>
+                        <circle cx="18.849" cy="35.227" r="2.458" fill="#197769"/>
+                        <circle cx="35.239" cy="35.227" r="2.458" fill="#197769"/>
+                        <circle cx="51.629" cy="35.227" r="2.458" fill="#197769"/>
+                        <circle cx="2.458" cy="51.612" r="2.458" fill="#197769"/>
+                        <circle cx="18.849" cy="51.612" r="2.458" fill="#197769"/>
+                        <circle cx="35.239" cy="51.612" r="2.458" fill="#197769"/>
+                        <circle cx="51.629" cy="51.612" r="2.458" fill="#197769"/>
+                    </g>
+                    <circle cx="2.458" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="18.849" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="35.239" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="51.629" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="2.458" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="18.849" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="35.239" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="51.629" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="2.458" cy="35.227" r="2.458" fill="#197769"/>
+                    <circle cx="18.849" cy="35.227" r="2.458" fill="#197769"/>
+                    <circle cx="35.239" cy="35.227" r="2.458" fill="#197769"/>
+                    <circle cx="51.629" cy="35.227" r="2.458" fill="#197769"/>
+                    <circle cx="2.458" cy="51.612" r="2.458" fill="#197769"/>
+                    <circle cx="18.849" cy="51.612" r="2.458" fill="#197769"/>
+                    <circle cx="35.239" cy="51.612" r="2.458" fill="#197769"/>
+                    <circle cx="51.629" cy="51.612" r="2.458" fill="#197769"/>
+                </g>
+                <g fill-rule="nonzero" opacity=".1" transform="translate(-227.225 -179.985) translate(239.642 399.692)">
+                    <circle cx="2.458" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="18.849" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="35.239" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="51.629" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="2.458" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="18.849" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="35.239" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="51.629" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                    <circle cx="2.458" cy="35.227" r="2.458" fill="#2E204E"/>
+                    <circle cx="18.849" cy="35.227" r="2.458" fill="#2E204E"/>
+                    <circle cx="35.239" cy="35.227" r="2.458" fill="#2E204E"/>
+                    <circle cx="51.629" cy="35.227" r="2.458" fill="#2E204E"/>
+                    <circle cx="2.458" cy="51.612" r="2.458" fill="#2E204E"/>
+                    <circle cx="18.849" cy="51.612" r="2.458" fill="#2E204E"/>
+                    <circle cx="35.239" cy="51.612" r="2.458" fill="#2E204E"/>
+                    <circle cx="51.629" cy="51.612" r="2.458" fill="#2E204E"/>
+                    <g transform="translate(62.083)">
+                        <circle cx="2.458" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="18.849" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="35.239" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="51.629" cy="2.458" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="2.458" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="18.849" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="35.239" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="51.629" cy="18.843" r="2.458" fill="#F2F3F8"/>
+                        <circle cx="2.458" cy="35.227" r="2.458" fill="#2E204E"/>
+                        <circle cx="18.849" cy="35.227" r="2.458" fill="#2E204E"/>
+                        <circle cx="35.239" cy="35.227" r="2.458" fill="#2E204E"/>
+                        <circle cx="51.629" cy="35.227" r="2.458" fill="#2E204E"/>
+                        <circle cx="2.458" cy="51.612" r="2.458" fill="#2E204E"/>
+                        <circle cx="18.849" cy="51.612" r="2.458" fill="#2E204E"/>
+                        <circle cx="35.239" cy="51.612" r="2.458" fill="#2E204E"/>
+                        <circle cx="51.629" cy="51.612" r="2.458" fill="#2E204E"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

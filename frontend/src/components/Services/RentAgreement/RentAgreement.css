@@ -1,0 +1,124 @@
+.ra-h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    filter: blur(0px);
+}
+
+.ra-h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #01bf71;
+}
+
+.split-screen {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+}
+
+.ra-left {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100px; */
+}
+
+.ra-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ra-left {
+    background: url("../../../images/ra3c.jpg");
+    background-size: cover;
+    filter: blur(1.5px);
+}
+
+.ra-left .copy {
+    color: white;
+    text-align: center;
+}
+
+.ra-right .copy {
+    color: #000;
+    text-align: center;
+    /* padding-top: 10px; */
+    padding-bottom: 10px;
+}
+
+.ra-form {
+    width: 500px;
+    /* border: 1px solid #eee;
+    border-radius: 20px; */
+    padding: 20px;
+}
+
+.ra-input {
+    display: block;
+    width: 100%;
+    /* box-sizing: border-box; */
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    padding: 1em;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    height: 18px;
+    /* background-color: #aaa; */
+    /* color: white; */
+    text-decoration: none;
+    outline: none;
+}
+
+.ra-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    color: aliceblue;
+}
+
+.next-btn {
+    display: block;
+    width: 100%;
+    background: #01bf71;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+.next-btn:hover {
+    background: #00854e;
+    cursor: pointer;
+}
+
+/* .ra-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+@media screen and (min-width: 900px) {
+    .split-screen {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .ra-left,
+    .ra-right {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ra-h1 {
+        font-size: 2rem;
+    }
+}
