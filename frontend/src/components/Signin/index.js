@@ -68,7 +68,10 @@ class SignIn extends Component {
                         <img src={judge} alt="avatar" />
                     </div>
                     <div className="login-form">
-                        <form onSubmit={this.handleSubmit}>
+                        <form
+                            onSubmit={this.handleSubmit}
+                            className="signin-form"
+                        >
                             <img src={profile} alt="" />
                             <h2>Welcome Back</h2>
                             <div className="input-div username">

@@ -58,7 +58,7 @@ class SignUp extends Component {
                 <section className="leftside">
                     <img src={photo} alt="" />
                 </section>
-                <section className="main">
+                <section className="signup-main">
                     <div className="signup-container">
                         <p className="title">Welcome</p>
                         <div className="separator"></div>
@@ -68,8 +68,9 @@ class SignUp extends Component {
                             className="signup-form"
                             onSubmit={this.handleSubmit}
                         >
-                            <div className="form-control">
+                            <div className="signup-form-control">
                                 <input
+                                    className="signup-input"
                                     type="text"
                                     placeholder="Username"
                                     id="name"
@@ -79,8 +80,9 @@ class SignUp extends Component {
                                 />
                                 <i class="fas fa-user"></i>
                             </div>
-                            <div className="form-control">
+                            <div className="signup-form-control">
                                 <input
+                                    className="signup-input"
                                     type="email"
                                     placeholder="Email"
                                     id="email"
@@ -90,8 +92,9 @@ class SignUp extends Component {
                                 />
                                 <i class="fas fa-user"></i>
                             </div>
-                            <div class="form-control">
+                            <div class="signup-form-control">
                                 <input
+                                    className="signup-input"
                                     type="password"
                                     placeholder="Password"
                                     id="password"
@@ -131,7 +134,9 @@ class SignUp extends Component {
                                     Lawyer
                                 </label>
                             </div>{" "}
-                            <button class="submit">Sign Up</button>
+                            <button type="submit" className="signup-submit">
+                                Sign Up
+                            </button>
                             <div>
                                 {authError ? (
                                     <p className="logInError">{authError}</p>

@@ -5,13 +5,14 @@
     grid-template-columns: 1fr 1fr;
 }
 
-section {
+.signup-main,
+.leftside {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section.leftside {
+.leftside {
     background: url(../../images/wave-blue.png) no-repeat;
     background-size: 100% 102%;
 }
@@ -59,21 +60,21 @@ section.leftside {
     flex-direction: column;
 }
 
-.form-control {
+.signup-form-control {
     width: 100%;
     position: relative;
     margin-bottom: 24px;
 }
 
-input,
-button {
+.signup-input,
+.signup-submit {
     border-radius: 30px;
     font-size: 1.1em;
     border: none;
     outline: none;
 }
 
-input {
+.signup-input {
     letter-spacing: 0.5px;
     padding: 14px 64px;
     width: 100%;
@@ -81,7 +82,7 @@ input {
     color: #333;
 }
 
-input ~ i {
+.signup-input ~ i {
     color: #888;
     transition: color 0.4s;
     position: absolute;
@@ -90,11 +91,10 @@ input ~ i {
     transform: translateY(-50%);
 }
 
-input:focus ~ i {
+.signup-input:focus ~ i {
     color: #843bc7;
 }
-
-button.submit {
+.signup-submit {
     letter-spacing: 2px;
     font-weight: bold;
     color: #fff;
@@ -106,7 +106,7 @@ button.submit {
     transition: opacity 0.4s;
 }
 
-button.submit:hover {
+button.signup-submit:hover {
     opacity: 0.9;
 }
 
