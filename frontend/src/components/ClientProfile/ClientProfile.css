@@ -1,43 +1,23 @@
 body {
   overflow-x: hidden;
 }
-
 .container {
-  background: #fff;
+  background: #010606;
   width: 900px;
   height: 750px;
   margin: 0 auto;
   position: relative;
-  margin-top: 10%;
+  margin-top: 0%;
 }
 
 .leftbox {
   float: left;
-  top: 0%;
-
+  top: 5%;
   position: absolute;
-  width: 15%;
-  height: 80%;
+  width: 25%;
+  height: 25%;
   background: #2ed573;
-
-  border: 1em solid #fff;
-}
-nav a {
-  list-style: none;
-  padding: 35px;
-  color: #fff;
-  font-size: 1.1em;
-  display: block;
-}
-
-nav a:hover {
-  color: #10ac84;
-  cursor: pointer;
-}
-
-nav a.active {
-  color: #10ac84;
-  cursor: pointer;
+  border: 1em solid;
 }
 
 .rightbox {
@@ -57,7 +37,7 @@ h1 {
   margin-bottom: 35px;
 }
 h2 {
-  color: #777;
+  color: #7ed386;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -91,12 +71,10 @@ span {
 
 .input1 {
   border: 0;
-  background: #fff;
   border-bottom: 1px solid #3fb6a8;
-  width: 80%;
   font-family: "montserrat" sans-serif;
   font-size: 0.7rem;
-  padding: 7px 0;
+  padding: 10px 100px;
   color: #070707;
   outline: none;
 }

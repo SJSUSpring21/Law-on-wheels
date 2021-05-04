@@ -12,18 +12,22 @@ const userSchema = new Schema(
       min: [10, "Enter a valid number"],
       max: [10, "Enter a valid number"],
     },
+    dateOfBirth: { type: String },
+    aadhar: { type: String },
     timezone: {
       type: String,
       trim: true,
       default: "Asia/Calcutta",
       required: true,
     },
+    gender: { type: String },
     image: {
       type: String,
     },
     address: {
       type: String,
     },
+    state: { type: String },
     city: {
       type: String,
     },
