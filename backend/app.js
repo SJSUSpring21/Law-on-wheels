@@ -8,6 +8,8 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const users = require("./users/routes");
 const lawyers = require("./lawyers/routes");
+const rentalAgreement = require("./rentalAgreement/routes");
+const cases = require("./cases/routes");
 const mongoose = require("./configuration/database");
 const models = require("./models/modelsStore");
 const config = require("./configuration/config");
@@ -51,7 +53,8 @@ app.use(function (req, res, next) {
 // Add routes in the app
 app.use("/users", users);
 app.use("/lawyers", lawyers);
-
+app.use("/rentalagreement", rentalAgreement);
+app.use("/cases", cases);
 // Start the server
 app.listen(PORT, () => {
   console.log("Backend Server started on port: ", PORT);

@@ -3,12 +3,13 @@ const Joi = require("joi");
 const models = require("../models/modelsStore");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { requireSignIn } = require("../configuration/passport");
 const config = require("../configuration/config");
 const {
   checkIfEmailIsAlreadyUsedAsLawyer,
-  checkIfEmailIsAlreadyUsedAsUser,
   capitalizeFirstLetter,
 } = require("../helpers/utils");
+const { rentalAgreements } = require("../models/modelsStore");
 
 // Initializing Router
 const router = express.Router();
@@ -268,5 +269,60 @@ router.post("/updateUser", async (req, res) => {
         errorMessage: err,
       });
     });
+});
+
+router.get("/dashboard", requireSignIn, async (req, res) => {
+  // lawyer not allowed
+  if (req.user.type === config.LAWYER_TYPE) {
+    res.status(405).send({ errorMessage: "Lawyers not allowed." });
+  } else {
+    const ongoingRentalAgreementCases = [];
+    const completedRentalAgreementCases = [];
+    const rejectedRentalAgreementCases = [];
+    const user = await models.users
+      .findById(
+        req.user._id,
+        "name email activeCases completedCases rejectedCases rentalAgreementCases"
+      )
+      .populate({
+        path: "rentalAgreementCases",
+        select: "status type lawyer",
+        populate: {
+          path: "lawyer",
+          select: "name email",
+        },
+      });
+    // Filter out rental agreement cases
+    await user.rentalAgreementCases.forEach((temp) => {
+      if (temp.status === config.APPROVED_STATUS) {
+        completedRentalAgreementCases.push({
+          _id: temp._id,
+          lawyer: temp.lawyer,
+          type: config.CASE_TYPE_RENTAL_AGREEMENT,
+          status: temp.status,
+        });
+      } else {
+        ongoingRentalAgreementCases.push({
+          _id: temp._id,
+          lawyer: temp.lawyer,
+          type: config.CASE_TYPE_RENTAL_AGREEMENT,
+          status: temp.status,
+        });
+      }
+    });
+
+    res.status(200).send({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      type: config.USER_TYPE,
+      ongoingRentalAgreementCases,
+      completedRentalAgreementCases,
+      rejectedRentalAgreementCases,
+      activeCases: user.activeCases,
+      completedCases: user.completedCases,
+      rejectedCases: user.rejectedCases,
+    });
+  }
 });
 module.exports = router;
