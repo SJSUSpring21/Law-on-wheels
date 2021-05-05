@@ -2,6 +2,7 @@ const express = require("express");
 const Joi = require("joi");
 const models = require("../models/modelsStore");
 const bcrypt = require("bcrypt");
+const { requireSignIn } = require("../configuration/passport");
 const jwt = require("jsonwebtoken");
 const config = require("../configuration/config");
 const {
@@ -178,4 +179,59 @@ router.post("/login", async (req, res) => {
     });
 });
 
+router.get("/dashboard", requireSignIn, async (req, res) => {
+  // Users not allowed
+  console.log(req.user.type);
+  if (req.user.type == config.USER_TYPE) {
+    res.status(405).send({ errorMessage: "Users not allowed." });
+  } else {
+    const ongoingRentalAgreementCases = [];
+    const completedRentalAgreementCases = [];
+    const rejectedRentalAgreementCases = [];
+    const user = await models.lawyers
+      .findById(
+        req.user._id,
+        "name email activeCases completedCases rejectedCases rentalAgreementCases isApprovedByAdmin"
+      )
+      .populate({
+        path: "rentalAgreementCases",
+        select: "status type lawyer",
+        populate: {
+          path: "user",
+          select: "name email",
+        },
+      });
+    // Filter out rental agreement cases
+    await user.rentalAgreementCases.forEach((temp) => {
+      if (temp.status === config.APPROVED_STATUS) {
+        completedRentalAgreementCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_RENTAL_AGREEMENT,
+          status: temp.status,
+        });
+      } else {
+        ongoingRentalAgreementCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_RENTAL_AGREEMENT,
+          status: temp.status,
+        });
+      }
+    });
+
+    res.status(200).send({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      type: config.USER_TYPE,
+      ongoingRentalAgreementCases,
+      completedRentalAgreementCases,
+      rejectedRentalAgreementCases,
+      activeCases: user.activeCases,
+      completedCases: user.completedCases,
+      rejectedCases: user.rejectedCases,
+    });
+  }
+});
 module.exports = router;

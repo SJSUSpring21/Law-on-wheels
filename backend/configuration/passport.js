@@ -25,6 +25,7 @@ const initializePassport = () => {
             if (error) {
               return callback(error, false);
             } else if (user) {
+              user.type = config.LAWYER_TYPE;
               callback(null, user);
             } else {
               callback(null, false);
@@ -39,6 +40,7 @@ const initializePassport = () => {
             if (error) {
               return callback(error, false);
             } else if (user) {
+              user.type = config.USER_TYPE;
               callback(null, user);
             } else {
               callback(null, false);

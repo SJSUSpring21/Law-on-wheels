@@ -37,6 +37,45 @@ const userSchema = new Schema(
       max: [6, "Enter a valid pincode"],
       trim: true,
     },
+    activeCases: {
+      type: Number,
+      validate: {
+        validator: function (num) {
+          return num >= 0;
+        },
+        message: (props) => `${props.value} is not a positive number`,
+      },
+      required: true,
+      default: 0,
+    },
+    completedCases: {
+      type: Number,
+      validate: {
+        validator: function (num) {
+          return num >= 0;
+        },
+        message: (props) => `${props.value} is not a positive number`,
+      },
+      required: true,
+      default: 0,
+    },
+    rejectedCases: {
+      type: Number,
+      validate: {
+        validator: function (num) {
+          return num >= 0;
+        },
+        message: (props) => `${props.value} is not a positive number`,
+      },
+      required: true,
+      default: 0,
+    },
+    rentalAgreementCases: [
+      {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "RentalAgreement",
+      },
+    ],
   },
   {
     timestamps: true,
