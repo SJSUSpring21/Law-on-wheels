@@ -38,6 +38,8 @@ const checkWhetherNextStatusIsValidForRentalAgreementCase = (
   currentStatus,
   nextStatus
 ) => {
+  console.log("YO1", currentStatus);
+  console.log("YO2", nextStatus);
   if (
     currentStatus === config.WAITING_FOR_REVIEW_STATUS &&
     nextStatus === config.REVIEWING_STATUS

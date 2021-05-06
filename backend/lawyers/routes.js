@@ -210,6 +210,13 @@ router.get("/dashboard", requireSignIn, async (req, res) => {
           type: config.CASE_TYPE_RENTAL_AGREEMENT,
           status: temp.status,
         });
+      } else if (temp.status === config.REJECTED_STATUS) {
+        rejectedRentalAgreementCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_RENTAL_AGREEMENT,
+          status: temp.status,
+        });
       } else {
         ongoingRentalAgreementCases.push({
           _id: temp._id,

@@ -163,19 +163,19 @@ router.post("/status/change", requireSignIn, async (req, res) => {
 
   // Branch out for each status
   if (req.body.type === config.CASE_TYPE_RENTAL_AGREEMENT) {
+    console.log("INSIDE");
     // Check whether status is the list of valid statuses or not
-    if (!rentalAgreementStatusTypes.includes(req.body.type)) {
+    if (!rentalAgreementStatusTypes.includes(req.body.newStatus)) {
       res.status(400).send({ errorMessage: "Select a valid status" });
       return;
     }
 
     // Find the rental agreement
     const rentalAgreement = await models.rentalAgreements.findById(
-      req.body.case_id,
-      "user lawyer status"
+      req.body.case_id
+      //   ,"user lawyer status"
     );
-
-    let finalRentAgreement;
+    console.log(rentalAgreement);
     // Check whether the next status aligns with the previous status
     if (
       !rentalAgreement ||
@@ -184,21 +184,50 @@ router.post("/status/change", requireSignIn, async (req, res) => {
         req.body.newStatus
       )
     ) {
-      res.status(400).send({ errorMessage: "Select a valid status" });
+      console.log("INSIDE DEAD STATUS");
+      res.status(400).send({ errorMessage: "Select a valid case and status" });
     } else if (req.body.newStatus === config.REVIEWING_STATUS) {
       rentalAgreement.status = req.body.newStatus;
       finalRentAgreement = await rentalAgreement.save();
+      res
+        .status(200)
+        .send({ rentalAgreement, message: "Status updated successfully" });
+      return;
     } else if (
       req.body.newStatus === config.APPROVED_STATUS ||
       req.body.newStatus === config.REJECTED_STATUS
     ) {
-      rentalAgreement.status = req.body.status;
+      console.log("INSIDE FINAL STATUS CHANGE");
+      rentalAgreement.status = req.body.newStatus;
+      // Find user and lawyer
+      const user = await models.users.findById(
+        rentalAgreement.user,
+        "completedCases rejectedCases activeCases"
+      );
+      const lawyer = await models.lawyers.findById(
+        rentalAgreement.lawyer,
+        "activeCases completedCases rejectedCases"
+      );
+      user.activeCases -= 1;
+      lawyer.activeCases -= 1;
       if (req.body.newStatus === config.APPROVED_STATUS) {
-      } else {
+        user.compltedCases += 1;
+        lawyer.compltedCases += 1;
+      } else if (req.body.newStatus === config.REJECTED_STATUS) {
+        user.rejectedCases += 1;
+        lawyer.rejectedCases += 1;
       }
+      await user.save();
+      await lawyer.save();
+      await rentalAgreement.save();
+      res
+        .status(200)
+        .send({ rentalAgreement, message: "Status updated successfully" });
+      return;
     }
   } else {
     res.status(400).send({ errorMessage: "Select a valid case." });
+    return;
   }
 });
 
