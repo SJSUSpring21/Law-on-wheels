@@ -1,11 +1,11 @@
 .ra-h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 700;
     filter: blur(0px);
 }
 
 .ra-h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #01bf71;
 }
@@ -62,8 +62,8 @@
     border-radius: 20px;
     padding: 1em;
     margin-bottom: 1.25rem;
-    font-size: 0.875rem;
-    height: 18px;
+    font-size: 1.5rem;
+    height: 35px;
     /* background-color: #aaa; */
     /* color: white; */
     text-decoration: none;
@@ -73,7 +73,7 @@
 .ra-label {
     display: block;
     margin-bottom: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     color: aliceblue;
 }
 
@@ -86,7 +86,7 @@
     border: none;
     padding: 1rem;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 5px;

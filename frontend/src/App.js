@@ -5,6 +5,7 @@ import SigninPage from "./pages/signin";
 import Center from "./pages/center";
 import ClientProfilePage from "./pages/clientprofile";
 import ServiceRentAgreement from "./pages/rentagreement";
+import ServiceMarriageDivorce from "./pages/marriagedivorce";
 
 function App() {
     return (
@@ -22,6 +23,11 @@ function App() {
                     exact
                     path="/service/rentagreement"
                     component={ServiceRentAgreement}
+                ></Route>
+                <Route
+                    exact
+                    path="/service/marriagedivorce"
+                    component={ServiceMarriageDivorce}
                 ></Route>
             </Switch>
         </Router>

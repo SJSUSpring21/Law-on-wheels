@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ServicesContainer = styled.div`
     height: 800px;
@@ -34,7 +35,7 @@ export const ServicesWrapper = styled.div`
     }
 `;
 
-export const ServicesCard = styled.div`
+export const ServicesCard = styled(Link)`
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -60,7 +61,7 @@ export const ServicesIcon = styled.img`
 `;
 
 export const ServicesH1 = styled.h1`
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #fff;
     margin-bottom: 64px;
     @media screen and(max-width: 480px) {
@@ -69,12 +70,12 @@ export const ServicesH1 = styled.h1`
 `;
 
 export const ServicesH2 = styled.h2`
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     font-weight: bold;
 `;
 
 export const ServicesP = styled.p`
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-align: center;
 `;

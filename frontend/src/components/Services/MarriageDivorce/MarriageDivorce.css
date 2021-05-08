@@ -1,0 +1,162 @@
+.black-bg {
+    background: #2a1b1f;
+}
+.md-header {
+    color: #fff;
+}
+
+.border-extra {
+    border-bottom: 1px dotted #eee;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.section-field h5,
+label {
+    color: #fff;
+}
+
+.md-select,
+.md-input {
+    width: 100%;
+    border-radius: 25px;
+    height: 40px;
+    line-height: 39px;
+    font-size: 15px;
+}
+.md-button {
+    background: #01bf71;
+    font-size: 18px;
+    color: black;
+}
+
+/* 
+.o-hidden {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .page-section-ptb {
+        padding: 50px 0;
+    }
+}
+
+.md-container {
+    border-top: 5px solid #d40436;
+    box-shadow: 0 5px 3px rgb(0 0 0 / 30%);
+    background-color: #252a36;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    color: #fff;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: block;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .section-title p {
+        font-size: 16px;
+    }
+}
+
+.section-title p {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.register-form .section-field {
+    display: block;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+.md-button {
+    background: #d40436;
+    padding: 12px 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: montserrat, sans-serif;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: inline-block;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid #d40436;
+}
+@media (max-width: 992px) {
+    .md-button {
+        font-size: 12px;
+        padding: 12px 15px;
+    }
+}
+
+.register-form .field-widget {
+    position: relative;
+}
+
+.register-form .field-widget select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.register-form .nice-select {
+    float: none;
+    margin-bottom: 20px;
+    background: #f6f7f8;
+    border: 0;
+}
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #f6f7f8;
+    border-radius: 25px;
+    border: solid 1px #f6f7f8;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    height: 50px;
+    line-height: 47px;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+} 
+*/

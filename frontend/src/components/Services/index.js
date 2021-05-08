@@ -19,28 +19,28 @@ const Services = () => {
         <ServicesContainer id="services">
             <ServicesH1>Services</ServicesH1>
             <ServicesWrapper>
-                <ServicesCard>
+                <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon5} />
                     <ServicesH2>Marriage Divorce</ServicesH2>
                     <ServicesP>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </ServicesP>
                 </ServicesCard>
-                <ServicesCard>
+                <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon1} />
                     <ServicesH2>Consumer Court</ServicesH2>
                     <ServicesP>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </ServicesP>
                 </ServicesCard>
-                <ServicesCard>
+                <ServicesCard to="/service/rentagreement">
                     <ServicesIcon src={Icon4} />
                     <ServicesH2>Rent Agreement</ServicesH2>
                     <ServicesP>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </ServicesP>
                 </ServicesCard>
-                <ServicesCard>
+                <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon3} />
                     <ServicesH2>Name Change</ServicesH2>
                     <ServicesP>
