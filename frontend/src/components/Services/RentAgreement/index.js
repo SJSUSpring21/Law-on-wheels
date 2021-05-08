@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ContractDetails from "./ContractDetails";
 import LandlordDetails from "./LandlordDetails";
+import PreviewRA from "./PreviewRA";
 import PropertyDetails from "./PropertyDetails";
 import TenantDetails from "./TenantDetails";
 
@@ -54,6 +55,11 @@ export class RentAgreement extends Component {
         console.log(this.state);
     };
 
+    getState = () => {
+        const values = this.state;
+        return values;
+    };
+
     render() {
         const { step } = this.state;
         const { fullname, number, email, state, city, stamp } = this.state;
@@ -94,6 +100,17 @@ export class RentAgreement extends Component {
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
                         values={values}
+                    />
+                );
+            case 5:
+                return (
+                    <PreviewRA
+                        previousStep={this.previousStep}
+                        nextStep={this.nextStep}
+                        handleChange={this.handleChange}
+                        handleSubmit={this.handleSubmit}
+                        values={values}
+                        getState={this.getState}
                     />
                 );
             default:

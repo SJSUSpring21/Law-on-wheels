@@ -39,6 +39,7 @@ export class TenantDetails extends Component {
                                 id="tenant_fullname"
                                 name="tenant_fullname"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -54,6 +55,7 @@ export class TenantDetails extends Component {
                                 id="tenant_parentname"
                                 name="tenant_parentname"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -66,6 +68,7 @@ export class TenantDetails extends Component {
                                 id="tenant_number"
                                 name="tenant_number"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -78,6 +81,7 @@ export class TenantDetails extends Component {
                                 id="tenant_email"
                                 name="tenant_email"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -94,6 +98,7 @@ export class TenantDetails extends Component {
                                 id="tenant_address"
                                 name="tenant_address"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 

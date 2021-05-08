@@ -35,6 +35,7 @@ export class PropertyDetails extends Component {
                                 id="floor"
                                 name="floor"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -47,6 +48,7 @@ export class PropertyDetails extends Component {
                                 id="bhk"
                                 className="ra-input"
                                 onChange={handleChange}
+                                required
                             >
                                 <option value="1RK">1 RK</option>
                                 <option value="1BHK">1 BHK</option>
@@ -68,6 +70,7 @@ export class PropertyDetails extends Component {
                                 id="house_number"
                                 name="house_number"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -83,6 +86,7 @@ export class PropertyDetails extends Component {
                                 id="property_address"
                                 name="property_address"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -99,6 +103,7 @@ export class PropertyDetails extends Component {
                                 id="property_locality"
                                 name="property_locality"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -115,6 +120,7 @@ export class PropertyDetails extends Component {
                                 id="property_pincode"
                                 name="property_pincode"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 

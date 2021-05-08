@@ -37,6 +37,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_fullname"
                                 name="landlord_fullname"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -52,6 +53,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_number"
                                 name="landlord_number"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -67,6 +69,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_email"
                                 name="landlord_email"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -82,6 +85,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_state"
                                 name="landlord_state"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -94,6 +98,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_city"
                                 name="landlord_city"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -109,6 +114,7 @@ export class LandlordDetails extends Component {
                                 id="landlord_stamp"
                                 name="landlord_stamp"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="ra-btn-container">

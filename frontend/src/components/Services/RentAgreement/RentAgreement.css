@@ -96,6 +96,17 @@
     cursor: pointer;
 }
 
+.ra-preview {
+    padding: 200px;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+.ra-window {
+    width: auto;
+    border: 1px solid black;
+}
+
 /* .ra-btn-container {
     display: flex;
     align-items: center;

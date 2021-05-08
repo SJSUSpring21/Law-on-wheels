@@ -38,6 +38,7 @@ export class ContractDetails extends Component {
                                 id="agreement_start_date"
                                 name="agreement_start_date"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -51,6 +52,7 @@ export class ContractDetails extends Component {
                                 id="monthly_rent"
                                 name="monthly_rent"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="input-container">
@@ -66,6 +68,7 @@ export class ContractDetails extends Component {
                                 id="security_amount"
                                 name="security_amount"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -80,6 +83,7 @@ export class ContractDetails extends Component {
                                 className="ra-input"
                                 onChange={handleChange}
                                 defaultValue="1"
+                                required
                             >
                                 <option value="1">1 month</option>
                                 <option value="2">2 months</option>
@@ -100,6 +104,7 @@ export class ContractDetails extends Component {
                                 id="rent_increment_percent"
                                 name="rent_increment_percent"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
 
@@ -109,6 +114,9 @@ export class ContractDetails extends Component {
                                 onClick={this.previous}
                             >
                                 <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button className="next-btn" onClick={this.next}>
+                                Check Preview
                             </button>
                             <button className="next-btn" onClick={handleSubmit}>
                                 Submit
