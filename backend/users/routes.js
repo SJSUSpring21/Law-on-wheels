@@ -279,10 +279,13 @@ router.get("/dashboard", requireSignIn, async (req, res) => {
     const ongoingRentalAgreementCases = [];
     const completedRentalAgreementCases = [];
     const rejectedRentalAgreementCases = [];
+    const ongoingMutualDivorceCases = [];
+    const completedMutualDivorceCases = [];
+    const rejectedMutualDivorceCases = [];
     const user = await models.users
       .findById(
         req.user._id,
-        "name email activeCases completedCases rejectedCases rentalAgreementCases"
+        "name email activeCases completedCases rejectedCases rentalAgreementCases mutualDivorceCases"
       )
       .populate({
         path: "rentalAgreementCases",
@@ -291,7 +294,16 @@ router.get("/dashboard", requireSignIn, async (req, res) => {
           path: "lawyer",
           select: "name email",
         },
+      })
+      .populate({
+        path: "mutualDivorceCases",
+        select: "status type lawyer",
+        populate: {
+          path: "user",
+          select: "name email",
+        },
       });
+
     // Filter out rental agreement cases
     await user.rentalAgreementCases.forEach((temp) => {
       if (temp.status === config.APPROVED_STATUS) {
@@ -318,6 +330,32 @@ router.get("/dashboard", requireSignIn, async (req, res) => {
       }
     });
 
+    // Filter out the mutual divorce cases
+    await user.mutualDivorceCases.forEach((temp) => {
+      if (temp.status === config.APPROVED_STATUS) {
+        completedMutualDivorceCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_MUTUAL_DIVORCE,
+          status: temp.status,
+        });
+      } else if (temp.status === config.REJECTED_STATUS) {
+        rejectedMutualDivorceCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_MUTUAL_DIVORCE,
+          status: temp.status,
+        });
+      } else {
+        ongoingMutualDivorceCases.push({
+          _id: temp._id,
+          user: temp.user,
+          type: config.CASE_TYPE_MUTUAL_DIVORCE,
+          status: temp.status,
+        });
+      }
+    });
+
     res.status(200).send({
       _id: user._id,
       name: user.name,
@@ -326,6 +364,9 @@ router.get("/dashboard", requireSignIn, async (req, res) => {
       ongoingRentalAgreementCases,
       completedRentalAgreementCases,
       rejectedRentalAgreementCases,
+      ongoingMutualDivorceCases,
+      completedMutualDivorceCases,
+      rejectedMutualDivorceCases,
       activeCases: user.activeCases,
       completedCases: user.completedCases,
       rejectedCases: user.rejectedCases,

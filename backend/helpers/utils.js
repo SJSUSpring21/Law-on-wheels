@@ -38,8 +38,6 @@ const checkWhetherNextStatusIsValidForRentalAgreementCase = (
   currentStatus,
   nextStatus
 ) => {
-  console.log("YO1", currentStatus);
-  console.log("YO2", nextStatus);
   if (
     currentStatus === config.WAITING_FOR_REVIEW_STATUS &&
     nextStatus === config.REVIEWING_STATUS
@@ -56,10 +54,48 @@ const checkWhetherNextStatusIsValidForRentalAgreementCase = (
   }
 };
 
+const checkWhetherNextStatusIsValidForMutualDivorceCase = (
+  currentStatus,
+  nextStatus
+) => {
+  if (
+    currentStatus === config.WAITING_FOR_REVIEW_STATUS &&
+    nextStatus === config.REVIEWING_STATUS
+  ) {
+    return true;
+  } else if (
+    currentStatus === config.REVIEWING_STATUS &&
+    (nextStatus === config.FILING_JOINT_PETITION ||
+      nextStatus === config.REJECTED_STATUS)
+  ) {
+    return true;
+  } else if (
+    currentStatus === config.FILING_JOINT_PETITION &&
+    nextStatus === config.APPEAR_IN_COURT_FIRST_MOTION
+  ) {
+    return true;
+  } else if (
+    currentStatus === config.APPEAR_IN_COURT_FIRST_MOTION &&
+    (nextStatus === config.APPEAR_IN_COURT_SECOND_MOTION ||
+      nextStatus === config.REJECTED_STATUS)
+  ) {
+    return true;
+  } else if (
+    currentStatus === config.APPEAR_IN_COURT_SECOND_MOTION &&
+    (nextStatus === config.APPROVED_STATUS ||
+      nextStatus === config.REJECTED_STATUS)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 module.exports = {
   checkIfEmailIsAlreadyUsedAsLawyer,
   checkIfEmailIsAlreadyUsedAsUser,
   capitalizeFirstLetter,
   findLawyerWithMinimumActiveCases,
   checkWhetherNextStatusIsValidForRentalAgreementCase,
+  checkWhetherNextStatusIsValidForMutualDivorceCase,
 };
