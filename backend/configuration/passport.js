@@ -13,7 +13,6 @@ options.secretOrKey = config.jwtSecretKey;
 const initializePassport = () => {
   passport.use(
     new JwtStrategy(options, (decodedPayload, callback) => {
-      console.log(decodedPayload);
       const _id = decodedPayload._id;
       const type = decodedPayload.type;
 

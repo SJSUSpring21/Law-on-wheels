@@ -9,6 +9,8 @@ const passport = require("passport");
 const users = require("./users/routes");
 const lawyers = require("./lawyers/routes");
 const rentalAgreement = require("./rentalAgreement/routes");
+const mutualDivorce = require("./mutualDivorce/routes");
+const adminRoute = require("./admin/routes");
 const cases = require("./cases/routes");
 const mongoose = require("./configuration/database");
 const models = require("./models/modelsStore");
@@ -55,6 +57,8 @@ app.use("/users", users);
 app.use("/lawyers", lawyers);
 app.use("/rentalagreement", rentalAgreement);
 app.use("/cases", cases);
+app.use("/mutualdivorce", mutualDivorce);
+app.use("/admin", adminRoute);
 // Start the server
 app.listen(PORT, () => {
   console.log("Backend Server started on port: ", PORT);

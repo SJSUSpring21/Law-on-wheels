@@ -76,6 +76,12 @@ const userSchema = new Schema(
         ref: "RentalAgreement",
       },
     ],
+    mutualDivorceCases: [
+      {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: "MutualDivorce",
+      },
+    ],
   },
   {
     timestamps: true,

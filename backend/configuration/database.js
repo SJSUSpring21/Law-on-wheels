@@ -10,12 +10,17 @@ const options = {
   bufferMaxEntries: 0,
 };
 
-mongoose.connect(config.mongodbUri, options, (err, res) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("MongoDB Connected");
-  }
-});
+// mongoose.connect(config.mongodbUri, options, (err, res) => {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("MongoDB Connected");
+//   }
+// });
+const connect = async () => {
+  const connection = await mongoose.connect(config.mongodbUri, options);
+  console.log(connection, "Connected to MOngoDB");
+};
 
+connect();
 module.exports = mongoose;
