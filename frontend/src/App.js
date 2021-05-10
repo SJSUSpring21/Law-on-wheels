@@ -7,6 +7,7 @@ import Center from "./pages/center";
 import Profile from "./pages/profile";
 import ServiceRentAgreement from "./pages/rentagreement";
 import ServiceMarriageDivorce from "./pages/marriagedivorce";
+import ViewProfile from "./pages/viewprofile";
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 					path="/service/marriagedivorce"
 					component={ServiceMarriageDivorce}
 				></Route>
+				<Route exact path="/viewprofile" component={ViewProfile}></Route>
 			</Switch>
 		</Router>
 	);
