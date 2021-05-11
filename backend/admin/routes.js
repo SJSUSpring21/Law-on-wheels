@@ -5,10 +5,48 @@ const AdminBroMongoose = require("@admin-bro/mongoose");
 
 // Register adapter
 AdminBro.registerAdapter(AdminBroMongoose);
-const adminBro = new AdminBro({
-  resources: [models.users, models.lawyers, models.rentalAgreements],
-  rootPath: "/admin",
+const adminBro = new AdminBro(
+  {
+    resources: [
+      models.users,
+      models.lawyers,
+      models.rentalAgreements,
+      models.mutualDivorces,
+    ],
+    rootPath: "/admin",
+    branding: {
+      companyName: "Law On Wheels",
+      softwareBrothers: false,
+      logo: false,
+    },
+    locale: {
+      language: "en",
+      translations: {
+        messages: {
+          loginWelcome: "",
+        },
+      },
+    },
+  },
+  { assets: { globalsFromCDN: false } }
+);
+
+// Admin credentials
+const ADMIN = {
+  email: "admin@gmail.com",
+  password: "admin",
+};
+
+const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
+  authenticate: async (email, password) => {
+    if (ADMIN.password === password && ADMIN.email === email) {
+      return ADMIN;
+    }
+    return null;
+  },
+  cookieName: "adminbro",
+  cookiePassword: "somePassword",
 });
 
-const router = AdminBroExpress.buildRouter(adminBro);
+//const router = AdminBroExpress.buildRouter(adminBro);
 module.exports = router;
