@@ -2,6 +2,8 @@
 
 // imports
 const express = require("express");
+const socketio = require("socket.io");
+const http = require("http");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -11,6 +13,7 @@ const lawyers = require("./lawyers/routes");
 const rentalAgreement = require("./rentalAgreement/routes");
 const mutualDivorce = require("./mutualDivorce/routes");
 const adminRoute = require("./admin/routes");
+const chatRoute = require("./chat/router");
 const cases = require("./cases/routes");
 const mongoose = require("./configuration/database");
 const models = require("./models/modelsStore");
@@ -26,7 +29,7 @@ const app = express();
 
 // Adding the middlewares
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static("public"));
 app.use(cors({ origin: config.frontendUrl, credentials: true }));
@@ -59,7 +62,33 @@ app.use("/rentalagreement", rentalAgreement);
 app.use("/cases", cases);
 app.use("/mutualdivorce", mutualDivorce);
 app.use("/admin", adminRoute);
+app.use("/chat", chatRoute);
+
+// Initializing thesocket server
+const server = http.createServer(app);
+const io = socketio(server);
+
+// Firing up web sockets
+io.on("connection", (socket) => {
+  console.log("We have a new connection");
+  socket.on("join", ({ room, message }) => {
+    socket.join(room);
+  });
+  socket.on("disconnect", () => {
+    console.log("User left");
+  });
+  socket.on("sendMessage", ({ room, message, loggedInUser_id }, callback) => {
+    console.log(room, message, loggedInUser_id);
+    io.to(room).emit("sendMessage", {
+      user: "TEST",
+      text: message,
+      loggedInUser_id,
+    });
+    callback();
+  });
+});
+
 // Start the server
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log("Backend Server started on port: ", PORT);
 });

@@ -2,6 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const config = require("../configuration/config");
 
+const messageSchema = new Schema(
+  {
+    message: { type: String, required: true, trim: true },
+    from: { type: mongoose.SchemaTypes.ObjectId, required: true },
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  }
+);
+
 const mutualDivorceSchema = new Schema({
   user: { type: mongoose.SchemaTypes.ObjectId, ref: "User", required: true },
   lawyer: {
@@ -135,6 +146,7 @@ const mutualDivorceSchema = new Schema({
   documents: {
     type: String,
   },
+  messages: [messageSchema],
 });
 
 const MutualDivorce = mongoose.model(

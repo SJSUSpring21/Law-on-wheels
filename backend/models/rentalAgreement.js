@@ -10,6 +10,17 @@ const tenantSchema = new Schema({
   panNumber: { type: String, required: false },
 });
 
+const messageSchema = new Schema(
+  {
+    message: { type: String, required: true, trim: true },
+    from: { type: mongoose.SchemaTypes.ObjectId, required: true },
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  }
+);
+
 const rentalAgreementSchema = new Schema({
   user: { type: mongoose.SchemaTypes.ObjectId, ref: "User", required: true },
   lawyer: {
@@ -91,6 +102,7 @@ const rentalAgreementSchema = new Schema({
     ],
     required: true,
   },
+  messages: [messageSchema],
 });
 
 const RentalAgreement = mongoose.model(
