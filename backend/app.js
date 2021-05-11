@@ -18,6 +18,7 @@ const cases = require("./cases/routes");
 const mongoose = require("./configuration/database");
 const models = require("./models/modelsStore");
 const config = require("./configuration/config");
+const images = require("./images/routes");
 
 const { initializePassport } = require("./configuration/passport");
 
@@ -63,6 +64,7 @@ app.use("/cases", cases);
 app.use("/mutualdivorce", mutualDivorce);
 app.use("/admin", adminRoute);
 app.use("/chat", chatRoute);
+app.use("/images", images);
 
 // Initializing thesocket server
 const server = http.createServer(app);

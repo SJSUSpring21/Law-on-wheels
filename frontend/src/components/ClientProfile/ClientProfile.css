@@ -7,11 +7,12 @@
     margin-top: 0%;
 }
 .leftbox {
-    float: left;
+    float: left; 
     top: 5%;
     position: absolute;
     width: 25%;
-    height: 25%;
+    
+    height: 28%;
     background: #2ed573;
     border: 1em solid;
 }

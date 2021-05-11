@@ -200,6 +200,7 @@ router.post("/getUser/:user_id", async (req, res) => {
           name: capitalizeFirstLetter(user.name),
           email: user.email,
           number: user.number,
+          image: user.image,
           dob: user.dateOfBirth,
           aadhar: user.aadhar,
           gender: user.gender,
