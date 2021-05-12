@@ -22,9 +22,6 @@ const images = require("./images/routes");
 
 const { initializePassport } = require("./configuration/passport");
 
-// Port Number
-const PORT = process.env.PORT || 3001;
-
 // Initializing the Application
 const app = express();
 
@@ -89,6 +86,9 @@ io.on("connection", (socket) => {
     callback();
   });
 });
+
+// Port Number
+const PORT = process.env.PORT || 3001;
 
 // Start the server
 server.listen(PORT, () => {
