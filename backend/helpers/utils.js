@@ -26,7 +26,7 @@ const capitalizeFirstLetter = (string) => {
 
 const findLawyerWithMinimumActiveCases = async () => {
   return await models.lawyers
-    .find()
+    .find({ isApprovedByAdmin: true })
     .sort([
       ["activeCases", "ascending"],
       ["createdAt", "descending"],

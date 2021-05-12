@@ -8,12 +8,65 @@ AdminBro.registerAdapter(AdminBroMongoose);
 const adminBro = new AdminBro(
   {
     resources: [
-      models.users,
-      models.lawyers,
-      models.rentalAgreements,
-      models.mutualDivorces,
+      {
+        resource: models.lawyers,
+        options: {
+          listProperties: ["_id", "name", "isApprovedByAdmin"],
+          properties: {
+            password: {
+              isVisible: { show: false, filter: false },
+            },
+            image: {
+              isVisible: { show: false, filter: false },
+            },
+          },
+        },
+      },
+      {
+        resource: models.users,
+        options: {
+          listProperties: ["_id", "name"],
+          properties: {
+            password: {
+              isVisible: { show: false, filter: false },
+            },
+            image: {
+              isVisible: { show: false, filter: false },
+            },
+          },
+        },
+      },
+      {
+        resource: models.rentalAgreements,
+        options: {
+          listProperties: ["_id", "lawyer", "user", "status"],
+          properties: {
+            messages: {
+              isVisible: { show: false, filter: false },
+            },
+          },
+        },
+      },
+      {
+        resource: models.mutualDivorces,
+        options: {
+          listProperties: ["_id", "lawyer", "user", "status"],
+          properties: {
+            messages: {
+              isVisible: { show: false, filter: false },
+            },
+          },
+        },
+      },
     ],
     rootPath: "/admin",
+    // dashboard: {
+    //   handler: async () => {
+    //     return { some: "output" };
+    //   },
+    //   redirect: "/admin/resources/lawyer",
+    //   component: AdminBro.bundle("./my-dashboard-component"),
+    // },
     dashboard: {
       handler: async () => {
         return { some: "output" };
