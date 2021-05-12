@@ -21,8 +21,12 @@ Access to Legal services in India is very limited, especially in rural areas. In
  2. Users
  3. Lawyers
 
-**4. Dataset links -NO**
+**4. Architecture Diagram**
 
-**Architecture Diagram**
+
 ![image](https://user-images.githubusercontent.com/76183832/118057337-a0ae7a00-b340-11eb-9ecb-41edaa3cb1d7.png)
+
+**5. Dataset links -NO**
+
+
 
