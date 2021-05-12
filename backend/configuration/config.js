@@ -1,7 +1,8 @@
 "use strict";
 
 const config = {
-  frontendUrl: "http://localhost:3000",
+  //frontendUrl: "http://localhost:3000",
+  frontendUrl: "http://lawonwheels.herokuapp.com",
   mongodbUri:
     "mongodb+srv://root:root@lawonwheels.2xl2a.mongodb.net/LawOnWheels?retryWrites=true&w=majority",
   jwtSecretKey: "secretKey",
