@@ -26,6 +26,11 @@ class RentACaseDetails extends Component {
         // } else if (type === "LAWYER") {
         //     center = <LawyerCenter />;
         // }
+        const type = localStorage.getItem("type");
+        const isApproved = localStorage.getItem("isApproved");
+        if (type === "LAWYER" && isApproved === "false") {
+            return <Redirect to="/profile" />;
+        }
 
         return (
             <>

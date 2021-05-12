@@ -19,11 +19,14 @@ class Center extends Component {
         const { loggedIn } = this.props;
         if (!loggedIn) return <Redirect to="/" />;
         const type = localStorage.getItem("type");
+        const isApproved = localStorage.getItem("isApproved");
         let center;
         if (type === "USER") {
             center = <ClientCenter />;
-        } else if (type === "LAWYER") {
+        } else if (type === "LAWYER" && isApproved === "true") {
             center = <LawyerCenter />;
+        } else if (type === "LAWYER" && isApproved === "false") {
+            return <Redirect to="/profile" />;
         }
 
         return (

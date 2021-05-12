@@ -31,7 +31,6 @@ const authenticationReducer = (state = initialState, action) => {
                 loggedIn: true,
                 user: action.payload,
             };
-
         case "SIGNOUT_SUCCESS":
             console.log("Signout Success");
             return {

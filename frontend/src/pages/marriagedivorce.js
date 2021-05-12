@@ -18,6 +18,11 @@ class ServiceMarriageDivorce extends Component {
     render() {
         const { loggedIn } = this.props;
         if (!loggedIn) return <Redirect to="/" />;
+        const type = localStorage.getItem("type");
+        const isApproved = localStorage.getItem("isApproved");
+        if (type === "LAWYER" && isApproved === "false") {
+            return <Redirect to="/profile" />;
+        }
 
         return (
             <>

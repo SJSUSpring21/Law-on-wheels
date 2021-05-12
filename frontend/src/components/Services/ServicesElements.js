@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export const ServicesContainer = styled.div`
     height: 800px;
     display: flex;
+    // margin-top: -150px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

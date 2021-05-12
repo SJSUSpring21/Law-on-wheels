@@ -4,6 +4,7 @@ import Server from "../../../webConfig";
 // import Token from "../../bearerToken";
 import avatar1 from "../../../images/caseProfile.jpeg";
 // import LawyerCenter from "../Center/LawyerCenter";
+import { displayStatusUsingStatusCode } from "../../../helpers/utils";
 
 export class RACaseDetails extends Component {
     state = {
@@ -58,6 +59,7 @@ export class RACaseDetails extends Component {
         let laywer_user_name = "";
         let lawyer_user_email = "";
         let nextStatuses = [];
+
         if (this.state && this.state.caseDetails) {
             const caseDetails = this.state.caseDetails;
             console.log("casD", caseDetails);
@@ -90,7 +92,9 @@ export class RACaseDetails extends Component {
                 "
                                     style={{ width: "100%" }}
                                 >
-                                    {this.state.nextStatuses[index]}
+                                    {displayStatusUsingStatusCode(
+                                        this.state.nextStatuses[index]
+                                    )}
                                 </div>
                             </div>
                             <br />
@@ -162,7 +166,10 @@ export class RACaseDetails extends Component {
                                             style={{ width: "100%" }}
                                         >
                                             {this.state.caseDetails
-                                                ? this.state.caseDetails.status
+                                                ? displayStatusUsingStatusCode(
+                                                      this.state.caseDetails
+                                                          .status
+                                                  )
                                                 : "loading"}
                                         </div>
                                     </div>
@@ -171,18 +178,16 @@ export class RACaseDetails extends Component {
 
                                     <p class="w3-large w3-text-theme">
                                         <b>
-                                            <i
-                                                class="
-                                            fa fa-sign-out fa-fw
-                                            w3-margin-right w3-text-teal
-                                        "
-                                            ></i>
-                                            Next Statuses
+                                            {this.state.nextStatuses &&
+                                            accountT === "LAWYER"
+                                                ? "Next Statuses"
+                                                : ""}
                                         </b>
                                     </p>
-                                    {this.state.nextStatuses
+                                    {this.state.nextStatuses &&
+                                    accountT === "LAWYER"
                                         ? nextStatuses
-                                        : "loading"}
+                                        : ""}
                                     <br />
                                 </div>
                             </div>

@@ -23,3 +23,12 @@
 .lc-side-tags {
     font-weight: bold;
 }
+
+.cc-message {
+    /* padding-top: 0; */
+    line-height: 500px;
+}
+
+.cc-msg-span {
+    font-size: 11px;
+}

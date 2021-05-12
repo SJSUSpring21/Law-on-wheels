@@ -3,6 +3,7 @@ import axios from "axios";
 import Server from "../../../webConfig";
 import "../CaseDetails.css";
 import swal from "sweetalert";
+import { displayStatusUsingStatusCode } from "../../../helpers/utils";
 
 export class MDCaseDetails extends Component {
     state = {
@@ -137,7 +138,9 @@ export class MDCaseDetails extends Component {
                 "
                                     style={{ width: "100%" }}
                                 >
-                                    {this.state.nextStatuses[index]}
+                                    {displayStatusUsingStatusCode(
+                                        this.state.nextStatuses[index]
+                                    )}
                                 </div>
                             </div>
                             <br />
@@ -209,7 +212,10 @@ export class MDCaseDetails extends Component {
                                             style={{ width: "100%" }}
                                         >
                                             {this.state.caseDetails
-                                                ? this.state.caseDetails.status
+                                                ? displayStatusUsingStatusCode(
+                                                      this.state.caseDetails
+                                                          .status
+                                                  )
                                                 : "loading"}
                                         </div>
                                     </div>
@@ -218,18 +224,16 @@ export class MDCaseDetails extends Component {
 
                                     <p class="w3-large w3-text-theme">
                                         <b>
-                                            <i
-                                                class="
-                                            fa fa-sign-out fa-fw
-                                            w3-margin-right w3-text-teal
-                                        "
-                                            ></i>
-                                            Next Statuses
+                                            {this.state.nextStatuses &&
+                                            accountT === "LAWYER"
+                                                ? "Next Statuses"
+                                                : ""}
                                         </b>
                                     </p>
-                                    {this.state.nextStatuses
+                                    {this.state.nextStatuses &&
+                                    accountT === "LAWYER"
                                         ? nextStatuses
-                                        : "loading"}
+                                        : ""}
                                 </div>
                             </div>
                             <br />

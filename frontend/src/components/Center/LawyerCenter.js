@@ -6,14 +6,13 @@ import axios from "axios";
 import Server from "../../webConfig";
 import Token from "../../bearerToken";
 import "./Center.css";
+import { displayStatusUsingStatusCode } from "../../helpers/utils";
 class LawyerCenter extends Component {
     state = {};
 
     componentWillMount = async () => {
         axios.defaults.withCredentials = true;
-        // let dashboard = await axios.get(`${Server}/lawyers/dashboard`, Token);
-        // console.log(dashboard.data.ongoingRentalAgreementCases);
-        console.log(Token);
+
         axios
             .get(`${Server}/lawyers/dashboard`, {
                 headers: {
@@ -34,6 +33,7 @@ class LawyerCenter extends Component {
             });
         // const dashboard1 = JSON.stringify(dashboard)
     };
+
     render() {
         const name = localStorage.getItem("name");
         const email = localStorage.getItem("email");
@@ -98,7 +98,9 @@ class LawyerCenter extends Component {
                             <br />
                             <hr class="w3-clear" />
                             <p style={{ display: "inline-block" }}>
-                                {ongoingRentalAgreementCases[index].status}
+                                {displayStatusUsingStatusCode(
+                                    ongoingRentalAgreementCases[index].status
+                                )}
                             </p>
                             <Link to={chatLink}>
                                 {" "}
@@ -160,7 +162,9 @@ class LawyerCenter extends Component {
                                 <hr class="w3-clear" />
                             </Link>
                             <p style={{ display: "inline-block" }}>
-                                {ongoingMutualDivorceCases[index].status}
+                                {displayStatusUsingStatusCode(
+                                    ongoingMutualDivorceCases[index].status
+                                )}
                             </p>
                             <Link to={chatLink}>
                                 {" "}
@@ -444,9 +448,13 @@ class LawyerCenter extends Component {
                                         <h4 class="w3 ">Mutual Divorce</h4>
                                         <hr />
                                         <div>
-                                            {
+                                            {populatedcompletedMutualDivorceCases.length ? (
                                                 populatedcompletedMutualDivorceCases
-                                            }
+                                            ) : (
+                                                <span className="cc-msg-span">
+                                                    No Cases
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
 
@@ -454,9 +462,13 @@ class LawyerCenter extends Component {
                                         <h4 class="w3">Rental Agreement</h4>
                                         <hr />
                                         <div>
-                                            {
+                                            {populatedcompletedRentalAgreementCases.length ? (
                                                 populatedcompletedRentalAgreementCases
-                                            }
+                                            ) : (
+                                                <span className="cc-msg-span">
+                                                    No Cases
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -467,57 +479,19 @@ class LawyerCenter extends Component {
                         </div>
 
                         <div class="w3-col m6">
-                            {populatedOngoingRentalAgreementCases}
+                            {populatedOngoingRentalAgreementCases.length ? (
+                                populatedOngoingRentalAgreementCases
+                            ) : (
+                                <div class="w3-container w3-card w3-white w3-round w3-margin">
+                                    <br />
+
+                                    <span class="w3-center w3-opacity cc-message">
+                                        You currently don't have any ongoing
+                                        case
+                                    </span>
+                                </div>
+                            )}
                             {populatedOngoingMutualDivorceCases}
-                            <div class="w3-container w3-card w3-white w3-round w3-margin">
-                                <br />
-                                <img
-                                    src={avatar}
-                                    alt="Avatar"
-                                    class="w3-left w3-circle w3-margin-right"
-                                    style={{ width: "60px" }}
-                                />
-                                <span class="w3-right w3-opacity">16 min</span>
-                                <h4>Jane Doe</h4>
-                                <br />
-                                <hr class="w3-clear" />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
-                                </p>
-                            </div>
-                            <div class="w3-container w3-card w3-white w3-round w3-margin">
-                                <br />
-                                <img
-                                    src={avatar}
-                                    alt="Avatar"
-                                    class="w3-left w3-circle w3-margin-right"
-                                    style={{ width: "60px" }}
-                                />
-                                <span class="w3-right w3-opacity">32 min</span>
-                                <h4>Angie Jane</h4>
-                                <br />
-                                <hr class="w3-clear" />
-                                <p>Have you seen this?</p>
-                                <img
-                                    src="/w3images/nature.jpg"
-                                    style={{ width: "100%" }}
-                                    class="w3-margin-bottom"
-                                    alt=""
-                                />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
-                                </p>
-                            </div>
                         </div>
 
                         <div class="w3-col m3">
@@ -561,9 +535,13 @@ class LawyerCenter extends Component {
                                         <h4 class="w3 ">Mutual Divorce</h4>
                                         <hr />
                                         <div>
-                                            {
+                                            {populatedrejectedMutualDivorceCases.length ? (
                                                 populatedrejectedMutualDivorceCases
-                                            }
+                                            ) : (
+                                                <span className="cc-msg-span">
+                                                    No Cases
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
 
@@ -571,9 +549,13 @@ class LawyerCenter extends Component {
                                         <h4 class="w3">Rental Agreement</h4>
                                         <hr />
                                         <div>
-                                            {
+                                            {populatedrejectedRentalAgreementCases.length ? (
                                                 populatedrejectedRentalAgreementCases
-                                            }
+                                            ) : (
+                                                <span className="cc-msg-span">
+                                                    No Cases
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

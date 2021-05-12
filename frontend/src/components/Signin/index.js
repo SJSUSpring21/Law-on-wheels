@@ -49,7 +49,16 @@ class SignIn extends Component {
             localStorage.setItem("type", user.type);
             if (accountType === "LAWYER") {
                 localStorage.setItem("isApproved", user.isApproved);
-                return <Redirect to="/center" />;
+                if (!user.isApproved) {
+                    swal(
+                        "",
+                        "You are not approved by admin. If you have updated your details for approval ,please wait for 1,2 business days. If not, please update your details for review",
+                        "warning"
+                    );
+                    return <Redirect to="/profile" />;
+                } else {
+                    return <Redirect to="/center" />;
+                }
             } else if (accountType === "USER") {
                 return <Redirect to="/center" />;
             }
