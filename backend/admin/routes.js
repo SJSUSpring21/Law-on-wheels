@@ -14,6 +14,12 @@ const adminBro = new AdminBro(
       models.mutualDivorces,
     ],
     rootPath: "/admin",
+    dashboard: {
+      handler: async () => {
+        return { some: "output" };
+      },
+      component: AdminBro.bundle("./my-dashboard-component"),
+    },
     branding: {
       companyName: "Law On Wheels",
       softwareBrothers: false,
