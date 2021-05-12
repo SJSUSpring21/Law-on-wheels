@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import Server from "../../webConfig";
 import axios from "axios";
-import "./ClientProfile.css";
-import profile from "../../images/avatar-black.svg";
-import { ProfileContainer } from "./Newstyle.js";
 import swal from "sweetalert";
-import { Button } from "react-bootstrap";
+import "./ClientProfile.css";
 
 class ClientProfile extends Component {
   constructor(props) {
@@ -18,20 +15,6 @@ class ClientProfile extends Component {
     this.onChange = this.onChange.bind(this);
     this.onUpdate = this.onUpdate.bind(this);
   }
-  componentWillMount = () => {
-    axios.defaults.withCredentials = true;
-    axios
-      .post(`${Server}/users/getUser/${localStorage.getItem("user_id")}`)
-      .then((response) => {
-        console.log("response data from get user is", response.data);
-        this.setState({
-          userData: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log("error:", error);
-      });
-  };
   onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -42,6 +25,11 @@ class ClientProfile extends Component {
     this.setState({
       file: e.target.files[0],
       fileText: e.target.files[0].name,
+    });
+  };
+  onSelect = (data) => {
+    this.setState({
+      selectedSpecs: data,
     });
   };
 
@@ -62,6 +50,7 @@ class ClientProfile extends Component {
       city: this.state.city,
       zipcode: this.state.zipcode,
     };
+    console.log("profileData", profileData);
 
     axios.defaults.withCredentials = true;
     axios
@@ -109,129 +98,198 @@ class ClientProfile extends Component {
       });
   };
 
+  componentDidMount = () => {
+    axios.defaults.withCredentials = true;
+    axios
+      .post(`${Server}/users/getUser/${localStorage.getItem("user_id")}`)
+      .then((response) => {
+        console.log("response data from get user is", response.data);
+        this.setState({
+          userData: response.data,
+        });
+      })
+      .catch((error) => {
+        console.log("error:", error);
+      });
+  };
+
   render() {
     let imageSrc;
     if (this.state) {
       imageSrc = `${Server}/images/${this.state.userData.image}`;
     }
-    console.log("imageSrc", imageSrc);
-
     return (
-      <ProfileContainer>
-        <div className="container" id="client-profile-container">
-          <div className="leftbox">
-            <img
-              className="img-fluid"
-              src={imageSrc}
-              alt="profile-pic"
-              style={{ height: 150, width: 180 }}
-            />
-            <form onSubmit={this.onUpload}>
-              <input
-                type="file"
-                className="form-control-file"
-                name="image"
-                accept="image/*"
-                onChange={this.onImageChange}
-                required
+      <div className="container rounded mt-5 mb-5 client-profile">
+        <div className="row">
+          <div className="col-md-3 border-right">
+            <div className="d-flex flex-column align-items-center text-center p-3 py-5">
+              <img
+                className="rounded-circle mt-5"
+                width="150px"
+                src={imageSrc}
               />
-              <button className="btn1">Upload Image</button>
-            </form>
+              <form onSubmit={this.onUpload}>
+                <input
+                  type="file"
+                  className="form-control-file"
+                  name="image"
+                  accept="image/*"
+                  onChange={this.onImageChange}
+                  required
+                />
+                <button className="btn btn-primary" type="submit">
+                  Upload Image
+                </button>
+              </form>
+            </div>
           </div>
+          <div className="col-md-5 border-right">
+            <form onSubmit={this.onUpdate}>
+              <div className="p-3 py-5">
+                <div className="d-flex justify-content-between align-items-center mb-3">
+                  <h4>
+                    <strong>User Profile Details</strong>
+                  </h4>
+                </div>
 
-          <div className="rightbox">
-            <form className="client-profile-form" onSubmit={this.onUpdate}>
-              <h1 className="client-profile-h1">Primary Information</h1>
-              <h2 className="client-profile-h2">Name</h2>
-              <input
-                type="text"
-                name="name"
-                defaultValue={this.state.userData.name}
-                onChange={this.onChange}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Email</h2>
-              <input
-                type="email"
-                name="email"
-                defaultValue={this.state.userData.email}
-                onChange={this.onChange}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Date Of Birth</h2>
-              <input
-                type="text"
-                name="dob"
-                defaultValue={this.state.userData.dob}
-                onChange={this.onChange}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Phone Number</h2>
-              <input
-                type="tel"
-                pattern="^[0-9]+$"
-                minLength="10"
-                maxLength="10"
-                name="phoneNumber"
-                defaultValue={this.state.userData.number}
-                onChange={this.onChange}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Aadhar Card Number</h2>
-              <input
-                type="text"
-                name="aadhar"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.aadhar}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Gender</h2>
-              <input
-                type="text"
-                name="gender"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.gender}
-                className="input1"
-              />
+                <div className="row mt-3">
+                  <div className="col-md-12">
+                    <label className="labels">Your Name</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.name}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.email}
+                      pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$'%&*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])$"
+                      title="Please enter valid email address"
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Phone Number</label>
+                    <input
+                      id="number"
+                      name="phoneNumber"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.number}
+                      pattern="[1-9]{1}[0-9]{9}"
+                      title="Enter valid mobile number"
+                      required
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Date Of Birth</label>
+                    <input
+                      id="dob"
+                      name="dob"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.dob}
+                    />
+                  </div>
 
-              <h2 className="client-profile-h2">Street Address</h2>
-              <input
-                type="text"
-                name="address"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.address}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">State</h2>
-              <input
-                type="text"
-                name="state"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.state}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">City</h2>
-              <input
-                type="text"
-                name="city"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.city}
-                className="input1"
-              />
-              <h2 className="client-profile-h2">Zip Code</h2>
-              <input
-                type="text"
-                name="zipcode"
-                onChange={this.onChange}
-                defaultValue={this.state.userData.zipCode}
-                className="input1"
-              />
+                  <div className="col-md-12">
+                    <label className="labels">Aadhar Card Number</label>
+                    <input
+                      id="aadhar"
+                      name="aadhar"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.aadhar}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Gender</label>
+                    <select
+                      id="gender"
+                      name="gender"
+                      className="form-control"
+                      onChange={this.onChange}
+                      value={this.state.userData.gender}
+                    >
+                      <option value="" selected disabled hidden>
+                        Select Gender
+                      </option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Street Address</label>
+                    <input
+                      id="address"
+                      name="address"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.address}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">State</label>
+                    <input
+                      id="state"
+                      name="state"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.state}
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels"> City</label>
+                    <input
+                      id="city"
+                      name="city"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.city}
+                      placeholder="Type city (Eg: Mumbai)"
+                    />
+                  </div>
+                  <div className="col-md-12">
+                    <label className="labels">Zip Code</label>
+                    <input
+                      id="zipcode"
+                      name="zipcode"
+                      type="text"
+                      className="form-control"
+                      onChange={this.onChange}
+                      defaultValue={this.state.userData.zipCode}
+                      pattern="[1-9][0-9]{5}"
+                      title="Enter valid zipcode"
+                    />
+                  </div>
+                </div>
 
-              <button className="btn1">Update</button>
+                <div className="mt-5 text-center">
+                  <button className="btn btn-primary" type="submit">
+                    Save Profile
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
-      </ProfileContainer>
+      </div>
     );
   }
 }
