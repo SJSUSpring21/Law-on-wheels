@@ -1,0 +1,19 @@
+.cdra-body {
+    padding-top: 20px;
+}
+
+.ra-next-status:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    /* font-size: 12px; */
+}
+
+.ra-next-status-value {
+    font-size: 17px;
+}
+
+@media screen and (max-width: 480px) {
+    .ra-next-status-value {
+        font-size: 14px;
+    }
+}

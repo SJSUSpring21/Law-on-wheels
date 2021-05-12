@@ -10,7 +10,8 @@ import ServiceMarriageDivorce from "./pages/marriagedivorce";
 import Chat from "./components/Chat";
 import ChatList from "./components/ChatList";
 import ViewProfile from "./pages/viewprofile";
-import CaseDetails from "./pages/casedetails";
+import RentACaseDetails from "./pages/racasedetails";
+import DivorceCaseDetails from "./pages/mdcasedetails";
 
 function App() {
     return (
@@ -39,8 +40,13 @@ function App() {
                 ></Route>
                 <Route
                     exact
-                    path="/case/:case_id"
-                    component={CaseDetails}
+                    path="/case/rentagreement/:case_id"
+                    component={RentACaseDetails}
+                ></Route>
+                <Route
+                    exact
+                    path="/case/mutualdivorce/:case_id"
+                    component={DivorceCaseDetails}
                 ></Route>
             </Switch>
         </Router>

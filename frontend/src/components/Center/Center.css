@@ -1,4 +1,25 @@
 .w3-theme-l5,
-.w3-content {
+/* .w3-content {
     background: #000;
+} */
+
+.lc-side-cases {
+    border-bottom: 2px solid #aaa;
+}
+
+.lc-side-chatbn {
+    font-size: 12px;
+}
+
+.lc-completed-cases-down {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    border-bottom: none;
+}
+.lc-rightside-cases {
+    margin-top: 20px;
+}
+
+.lc-side-tags {
+    font-weight: bold;
 }

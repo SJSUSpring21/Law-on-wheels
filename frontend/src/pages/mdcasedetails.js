@@ -5,9 +5,9 @@ import { Redirect } from "react-router-dom";
 import SignedInSidebar from "../components/Sidebar/signedInSidebar";
 import ClientCenter from "../components/Center/ClientCenter";
 import LawyerCenter from "../components/Center/LawyerCenter";
-import Casedetail from "../components/CaseDetails";
+import MDCaseDetails from "../components/CaseDetails/MDCaseDetails";
 
-class CaseDetails extends Component {
+class DivorceCaseDetails extends Component {
     state = {
         isOpen: false,
     };
@@ -36,7 +36,7 @@ class CaseDetails extends Component {
 
                 <MainNavbar toggle={this.handleToggle} />
 
-                <Casedetail />
+                <MDCaseDetails />
             </>
         );
     }
@@ -47,4 +47,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, null)(CaseDetails);
+export default connect(mapStateToProps, null)(DivorceCaseDetails);
