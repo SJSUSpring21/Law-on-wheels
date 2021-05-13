@@ -97,6 +97,7 @@ export class MDCaseDetails extends Component {
     let laywer_user_name = "";
     let lawyer_user_email = "";
     let nextStatuses = [];
+    let act = localStorage.getItem("type");
     if (this.state && this.state.caseDetails) {
       const caseDetails = this.state.caseDetails;
       console.log("casD", caseDetails);
@@ -208,12 +209,12 @@ export class MDCaseDetails extends Component {
 
                   <p class="w3-large w3-text-theme">
                     <b>
-                      {this.state.nextStatuses && accountT === "Lawyer"
+                      {this.state.nextStatuses && act === "LAWYER"
                         ? "Next Statuses"
                         : ""}
                     </b>
                   </p>
-                  {this.state.nextStatuses && accountT === "Lawyer"
+                  {this.state.nextStatuses && act === "LAWYER"
                     ? nextStatuses
                     : ""}
                 </div>
