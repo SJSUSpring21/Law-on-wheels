@@ -19,7 +19,7 @@ router.post("/create", requireSignIn, async (req, res) => {
   // Manipulate request based on the data we get from frontend:
   const rawRentalagreementData = {
     clientType: config.RENT_AGREEMENT_TENANT_CLIENT,
-    propertyType: String(req.body.bhk),
+    propertyType: 2,
     propertyState: req.body.landlord_state,
     propertyCity: req.body.landlord_city,
     propertyFloor: req.body.floor,
@@ -63,7 +63,7 @@ router.post("/create", requireSignIn, async (req, res) => {
     panNumber: Joi.string(),
   });
 
-  // Design input schema
+  Design input schema
   const schema = Joi.object({
     clientType: Joi.string()
       .valid(
