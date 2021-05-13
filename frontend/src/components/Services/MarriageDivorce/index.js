@@ -55,7 +55,7 @@ export class MarriageDivorce extends Component {
       }
     );
 
-    if (casesResponse) {
+    if (casesResponse.status === 200) {
       swal("", "Submitted Successfully", "success");
       <Redirect to={"/center"} />;
     }
