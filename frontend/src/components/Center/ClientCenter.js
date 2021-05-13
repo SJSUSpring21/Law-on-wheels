@@ -406,7 +406,7 @@ class ClientCenter extends Component {
                     style={{
                         maxWidth: "100%",
                         paddingTop: "20px",
-                        background: "#555",
+                        background: "#000",
                     }}
                 >
                     <div class="w3-row">

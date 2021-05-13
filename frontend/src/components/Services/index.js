@@ -23,30 +23,22 @@ const Services = () => {
                 <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon5} />
                     <ServicesH2>Marriage Divorce</ServicesH2>
-                    <ServicesP>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </ServicesP>
+                    <ServicesP></ServicesP>
                 </ServicesCard>
                 <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon1} />
                     <ServicesH2>Consumer Court</ServicesH2>
-                    <ServicesP>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </ServicesP>
+                    <ServicesP></ServicesP>
                 </ServicesCard>
                 <ServicesCard to="/service/rentagreement">
                     <ServicesIcon src={Icon4} />
                     <ServicesH2>Rent Agreement</ServicesH2>
-                    <ServicesP>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </ServicesP>
+                    <ServicesP></ServicesP>
                 </ServicesCard>
                 <ServicesCard to="/service/marriagedivorce">
                     <ServicesIcon src={Icon3} />
                     <ServicesH2>Name Change</ServicesH2>
-                    <ServicesP>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </ServicesP>
+                    <ServicesP></ServicesP>
                 </ServicesCard>
             </ServicesWrapper>
         </ServicesContainer>
