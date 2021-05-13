@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "./MarriageDivorce.css";
+import Server from "../../../webConfig";
+import swal from "sweetalert";
+import { Redirect } from "react-router";
+import axios from "axios";
 
 export class MarriageDivorce extends Component {
     state = {
@@ -37,8 +41,24 @@ export class MarriageDivorce extends Component {
         });
     };
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(this.state);
+        // const saveRA = axios.post();
+        const casesResponse = await axios.post(
+            `${Server}/mutualdivorce/create`,
+            this.state,
+            {
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem("token"),
+                },
+            }
+        );
+
+        if (casesResponse) {
+            swal("", "Submitted Successfully", "success");
+            <Redirect to={"/center"} />;
+        }
     };
 
     render() {

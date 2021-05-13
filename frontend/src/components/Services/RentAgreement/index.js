@@ -1,10 +1,13 @@
+import axios from "axios";
 import React, { Component } from "react";
 import ContractDetails from "./ContractDetails";
 import LandlordDetails from "./LandlordDetails";
 import PreviewRA from "./PreviewRA";
 import PropertyDetails from "./PropertyDetails";
 import TenantDetails from "./TenantDetails";
-
+import Server from "../../../webConfig";
+import swal from "sweetalert";
+import { Redirect } from "react-router";
 export class RentAgreement extends Component {
     state = {
         step: 1,
@@ -50,9 +53,24 @@ export class RentAgreement extends Component {
         this.setState({ [e.target.id]: e.target.value });
     };
 
-    handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault();
         console.log(this.state);
+        // const saveRA = axios.post();
+        const casesResponse = await axios.post(
+            `${Server}/rentalagreement/create`,
+            this.state,
+            {
+                headers: {
+                    Authorization: "Bearer " + localStorage.getItem("token"),
+                },
+            }
+        );
+
+        if (casesResponse) {
+            swal("", "Submitted Successfully", "success");
+            <Redirect to={"/center"} />;
+        }
     };
 
     getState = () => {
