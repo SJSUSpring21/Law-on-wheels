@@ -86,7 +86,9 @@ class LawyerCenter extends Component {
                                     style={{ width: "60px" }}
                                 />
                                 <span class="w3-right w3-opacity">
-                                    {ongoingRentalAgreementCases[index].type}
+                                    {displayStatusUsingStatusCode(
+                                        ongoingRentalAgreementCases[index].type
+                                    )}
                                 </span>
                                 <h4>
                                     {
@@ -153,7 +155,9 @@ class LawyerCenter extends Component {
                                     style={{ width: "60px" }}
                                 />
                                 <span class="w3-right w3-opacity">
-                                    {ongoingMutualDivorceCases[index].type}
+                                    {displayStatusUsingStatusCode(
+                                        ongoingMutualDivorceCases[index].type
+                                    )}
                                 </span>
                                 <h4>
                                     {ongoingMutualDivorceCases[index].user.name}
