@@ -34,7 +34,7 @@ router.post("/create", requireSignIn, async (req, res) => {
     noticePeriod: req.body.notice_period,
     tenants: [
       {
-        name: req.body.tenant_full_name,
+        name: req.body.tenant_fullname,
         parentName: req.body.tenant_parentname,
         address: req.body.tenant_address,
         email: req.body.tenant_email,
